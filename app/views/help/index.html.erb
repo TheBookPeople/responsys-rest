@@ -1,0 +1,145 @@
+<script>
+    var shiftWindow = function() { scrollBy(0, -50) };
+    if (location.hash) shiftWindow();
+    window.addEventListener("hashchange", shiftWindow);
+</script>
+
+<nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#docs-collapse">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="#">@Version.VERSION</a>
+    </div>
+    <div class="collapse navbar-collapse" id="docs-collapse">
+      <ul class="nav navbar-nav">
+        <span class="caret"></span>
+        <li role="presentation" class="dropdown">
+          <a class="dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-expanded="false">
+            Deals <span class="caret"></span>
+          </a>
+          <ul class="dropdown-menu" role="menu">
+            <li><a href="#all-deals">All</a></li>
+            <li><a href="#categories">Categories</a></li>
+            <li><a href="#subcategories">Subcategories</a></li>
+            <li><a href="#user-deals">For User</a></li>
+            <li><a href="#purchase">Purchase</a></li>
+            <li><a href="#cancel_purchase">Cancel Purchase</a></li>
+          </ul>
+        </li>
+
+        <li><a href="#about">About</a></li>
+        <li><a href="#get_status">Status</a></li>
+
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<section class="container-fluid docs-section" >
+
+
+
+
+  <h1>Responsys REST API Help</h1>
+
+  <p>
+    The Responsys REST API is used by TBP to interact with Responsys.
+  </p>
+
+
+  <h2><a name="search">Search List</a></h2>
+
+
+  <h3>URL Structure</h3>
+<pre>
+POST <%= api_v1_search_url %>
+</pre>
+
+  <h3>Example</h3>
+
+<pre class="terminal">
+<code class="language-bash">
+  curl -X POST -i -L -H "Content-Type: application/json"  <%= api_v1_search_url %>\?pretty\=true -d'
+  {
+  "list" : "Stock Alert",
+  "folder" : "TBP_Prog_Stock_Alert",
+  "query_column" : "EMAIL_ADDRESS",
+  "query_data" : "nigel.vivian@thebookpeople.co.uk, iwan.pritchard@thebookpeople.co.uk",
+  "result_columns" : "PRODUCT_TITLE, FIRST_NAME, LAST_NAME"
+  }'
+</code>
+<code class="language-http">
+  HTTP/1.1 200 OK
+  X-Frame-Options: SAMEORIGIN
+  X-XSS-Protection: 1; mode=block
+  X-Content-Type-Options: nosniff
+  Content-Type: application/json; charset=utf-8
+  ETag: W/"7f48f839204c49afdca5a19a5aab9b20"
+  Cache-Control: max-age=0, private, must-revalidate
+  X-Request-Id: ef0dedf0-adc9-4338-884b-615aeabdb4dd
+  X-Runtime: 4.014707
+  Transfer-Encoding: chunked
+</code>
+<code class="language-javascript">
+  {
+  "status": "ok",
+  "data": [
+  {
+  "PRODUCT_TITLE": "Simply Italian",
+  "FIRST_NAME": "Iwan",
+  "LAST_NAME": "Pritchard"
+  },
+  {
+  "PRODUCT_TITLE": "Simply Italian",
+  "FIRST_NAME": "Nigel",
+  "LAST_NAME": "Vivian"
+  },
+  {
+  "PRODUCT_TITLE": "Home Brew Beer",
+  "FIRST_NAME": "Iwan",
+  "LAST_NAME": "Pritchard"
+  },
+  {
+  "PRODUCT_TITLE": "Ice Lollies",
+  "FIRST_NAME": "Nigel",
+  "LAST_NAME": "Vivian"
+  },
+  {
+  "PRODUCT_TITLE": "Super Fresh Juices and Smoothies",
+  "FIRST_NAME": "Nigel",
+  "LAST_NAME": "Vivian"
+  },
+  {
+  "PRODUCT_TITLE": "From Pole to Pole",
+  "FIRST_NAME": "Nigel",
+  "LAST_NAME": "Vivian"
+  },
+  {
+  "PRODUCT_TITLE": "From Pole to Pole",
+  "FIRST_NAME": "Iwan",
+  "LAST_NAME": "Pritchard"
+  },
+  {
+  "PRODUCT_TITLE": "Everyday Crystals for a Better Life",
+  "FIRST_NAME": "Nigel",
+  "LAST_NAME": "Vivian"
+  },
+  {
+  "PRODUCT_TITLE": "Everyday Crystals for a Better Life",
+  "FIRST_NAME": "Iwan",
+  "LAST_NAME": "Pritchard"
+  }
+  ]
+  }
+</code>
+</pre>
+
+
+
+
+</section>
