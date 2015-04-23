@@ -13,28 +13,11 @@
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>
       </button>
-      <a class="navbar-brand" href="#">@Version.VERSION</a>
+      <a class="navbar-brand" href="#">0.1</a>
     </div>
     <div class="collapse navbar-collapse" id="docs-collapse">
       <ul class="nav navbar-nav">
-        <span class="caret"></span>
-        <li role="presentation" class="dropdown">
-          <a class="dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-expanded="false">
-            Deals <span class="caret"></span>
-          </a>
-          <ul class="dropdown-menu" role="menu">
-            <li><a href="#all-deals">All</a></li>
-            <li><a href="#categories">Categories</a></li>
-            <li><a href="#subcategories">Subcategories</a></li>
-            <li><a href="#user-deals">For User</a></li>
-            <li><a href="#purchase">Purchase</a></li>
-            <li><a href="#cancel_purchase">Cancel Purchase</a></li>
-          </ul>
-        </li>
-
-        <li><a href="#about">About</a></li>
-        <li><a href="#get_status">Status</a></li>
-
+        <li><a href="#credentials">Credentials</a></li>
       </ul>
     </div>
   </div>
@@ -50,6 +33,26 @@
   <p>
     The Responsys REST API is used by TBP to interact with Responsys.
   </p>
+
+  <h2><a name="search">Credentials</a></h2>
+
+  <p>
+    In order for the REST API to interact with Responsys
+    the API requires a valid username and password. These
+    are configured using two environment variables.
+  </p>
+
+  <p>
+    These environment variables need to be set before
+    the server is started.
+  </p>
+
+  <pre class="terminal">
+    <code class="language-bash">
+    export RESPONSYS_USER=user
+    export RESPONSYS_PASSWORD=password
+    </code>
+  </pre>
 
 
   <h2><a name="search">Search List</a></h2>
