@@ -18,6 +18,7 @@
     <div class="collapse navbar-collapse" id="docs-collapse">
       <ul class="nav navbar-nav">
         <li><a href="#credentials">Credentials</a></li>
+        <li><a href="#search">Search</a></li>
       </ul>
     </div>
   </div>
@@ -56,6 +57,37 @@
 
 
   <h2><a name="search">Search List</a></h2>
+
+  <p>Search for customers within a list based. If the query returnes more
+  than 200 results the data will be truncated at 200.</p>
+
+  <h3>Query Column</h3>
+  <p>The query column can only be one of the following fields. This is
+  a Responsys limitation.</p>
+
+  <ul>
+    <li>RIID</li>
+    <li>CUSTOMER_ID</li>
+    <li>EMAIL_ADDRESS</li>
+    <li>MOBILE_NUMBER</li>
+  </ul>
+
+  <h3>Result Columns</h3>
+
+  <p>
+    The results columns define which columns from the list are returned
+    for the results. Any column that exists in the list can be used. This is
+    also an optional parameter. If it is not supplied the following columns
+    will be returned.
+
+  <ul>
+    <li>RIID</li>
+    <li>CUSTOMER_ID</li>
+    <li>EMAIL_ADDRESS</li>
+    <li>MOBILE_NUMBER</li>
+  </ul>
+
+  </p>
 
 
   <h3>URL Structure</h3>
