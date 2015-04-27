@@ -1,13 +1,18 @@
 require 'rails_helper'
 require 'pp'
 
-describe Api::V1::SearchController do
+describe Api::V1::SearchController, type: :controller do
 
   describe "create", :vcr do
 
     it "returns 200" do
       post :create, get_json
       expect(response.status).to equal 200
+    end
+
+    it "returns ok" do
+      post :create, get_json
+      expect(response_json['status']).to eq 'ok'
     end
 
     it "returns 9 results" do
@@ -32,18 +37,29 @@ describe Api::V1::SearchController do
       expect(response_json['data'][0] == first_result).to equal true
     end
 
-    it "200 if no results" do
-      data = get_json
-      data['query_data'] = 'me@example.com'
-      post :create, data
-      expect(response.status).to equal 200
-    end
+    describe 'no results' do
 
-    it "error message returned" do
-      data = get_json
-      data['query_data'] = 'me@example.com'
-      post :create, data
-      expect(response_json['error']['message']).to eq 'No records found in the list for given ids'
+      it "200 returned" do
+        data = get_json
+        data['query_data'] = 'me@example.com'
+        post :create, data
+        expect(response.status).to equal 200
+      end
+
+      it "error message" do
+        data = get_json
+        data['query_data'] = 'me@example.com'
+        post :create, data
+        expect(response_json['error']['message']).to eq 'No records found in the list for given ids'
+      end
+
+      it "status" do
+        data = get_json
+        data['query_data'] = 'me@example.com'
+        post :create, data
+        expect(response_json['status']).to eq 'failure'
+      end
+
     end
 
     describe "missing param" do
