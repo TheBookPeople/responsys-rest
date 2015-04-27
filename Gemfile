@@ -21,7 +21,6 @@ gem 'jbuilder', '~> 2.0'
 
 gem "responsys-api", :git => 'https://github.com/TheBookPeople/responsys-api.git',  :branch => 'upgrade-for-rails-4.2'
 
-gem 'rails_12factor', '~> 0.0.3'
 
 gem 'puma', '~> 2.11'
 
@@ -47,5 +46,10 @@ group :development, :test do
   gem 'rspec-rails', '~> 3.0'
   gem 'vcr', '~> 2.9'
   gem 'webmock', '~> 1.21'
+  gem 'guard'
+   gem 'guard-rspec', require: false
 end
 
+group :production do
+  gem 'rails_12factor', '~> 0.0.3'
+end
