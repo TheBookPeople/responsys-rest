@@ -19,9 +19,13 @@
 require 'simplecov'
 SimpleCov.start 'rails'
 
+require "codeclimate-test-reporter"
+CodeClimate::TestReporter.start
+
 require 'vcr'
 
 VCR.configure do |c|
+  c.ignore_hosts 'codeclimate.com'
   c.cassette_library_dir = 'spec/cassettes'
   c.hook_into :webmock
   c.filter_sensitive_data('your_responsys_username') { ENV['RESPONSYS_USER'] }
@@ -36,6 +40,8 @@ VCR.configure do |c|
 
   c.configure_rspec_metadata!
 end
+
+WebMock.disable_net_connect!(:allow => "codeclimate.com")
 
 RSpec.configure do |config|
   # rspec-expectations config goes here. You can use an alternate
@@ -96,7 +102,7 @@ RSpec.configure do |config|
   #   # order dependency and want to debug it, you can fix the order by providing
   #   # the seed, which is printed after each run.
   #   #     --seed 1234
-     config.order = :random
+#     config.order = :random
   #
   #   # Seed global randomization in this process using the `--seed` CLI option.
   #   # Setting this allows you to use `--seed` to deterministically reproduce
