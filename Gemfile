@@ -47,6 +47,7 @@ group :development, :test do
   gem 'guard', '~> 2.12'
   gem 'guard-rspec', require: false
   gem 'rubocop', '~> 0.30.1', require: false
+  gem 'simplecov', '~> 0.10', :require => false
 end
 
 group :production do
