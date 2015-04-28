@@ -13,24 +13,23 @@ describe Api::V1::SearchController, type: :controller do
       expect(response_json['status']).to eq 'ok'
     end
 
-    it 'returns 9 results' do
+    it 'returns results' do
       post :create, get_json
-      expect(response_json['data'].length).to equal 9
+      expect(response_json['data'].length).to equal 3
     end
 
     it 'supports custom results fields' do
       post :create, get_json
-      first_result = { 'PRODUCT_TITLE' => 'Simply Italian',
-                       'FIRST_NAME' => 'Iwan',
-                       'LAST_NAME' => 'Pritchard' }
+      first_result = { 'EMAIL_DELIVERABILITY_STATUS_' => 'D',
+                       'EMAIL_MD5_HASH_' => '111d68d06e2d317b5a59c2c6c5bad808'}
       expect(response_json['data'][0] == first_result).to equal true
     end
 
     it 'has default result colums' do
       post :create, get_json.except(:result_columns)
-      first_result = { 'RIID_' => '418390408',
-                       'CUSTOMER_ID_' => nil,
-                       'EMAIL_ADDRESS_' => 'iwan.pritchard@thebookpeople.co.uk',
+      first_result = { 'RIID_' => '449436402',
+                       'CUSTOMER_ID_' => '0001',
+                       'EMAIL_ADDRESS_' => 'user1@example.com',
                        'MOBILE_NUMBER_' => nil }
       expect(response_json['data'][0] == first_result).to equal true
     end
@@ -83,11 +82,11 @@ describe Api::V1::SearchController, type: :controller do
 
   def get_json
     {
-      list: 'Stock Alert',
-      folder: 'TBP_Prog_Stock_Alert',
-      query_column: 'EMAIL_ADDRESS',
-      query_data: 'nigel.vivian@thebookpeople.co.uk, iwan.pritchard@thebookpeople.co.uk',
-      result_columns: 'PRODUCT_TITLE, FIRST_NAME, LAST_NAME'
+      :list => 'z_Notifications_Email_list',
+      :folder =>  "z_Notifications",
+      :query_column => "EMAIL_ADDRESS",
+      :query_data =>  "user1@example.com, user2@example.com",
+      :result_columns =>  "EMAIL_DELIVERABILITY_STATUS_, EMAIL_MD5_HASH_"
     }
   end
 
