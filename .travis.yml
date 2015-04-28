@@ -1,8 +1,9 @@
 language: ruby
 sudo: false
 env:
+  matrix:
   - RESPONSYS_USER=user RESPONSYS_PASSWORD=password
 addons:
   code_climate:
     repo_token:
-      secure: GJm/TrjSneaH39Q+pI0awm5rkIjvAqqO8Ob7z6RZ18zu7maACYsL9owQ7Fa8zfC9DALGk2RSUikUdlONM+lTetBjT600PZmtTETpeVaZx8pf6Zn8KIgGsejIPV91cpMaavQbVceuA+NUn3eLWK18FvmYpZzQv+ps7/bkmYx+oTQ=
+      secure: dDiE10CxPcHxy9GPtYcp9o+5IKwzJqUuoGSoygmGTKdENKoaYQFkwoqy0BPFQSCRgWnIy6qNad3SnF8WpOJyya0uGccPrP/Jbs/iyZ9SfcyiYZ6IX3MKblYq/ao+4/2SzwoFGLGz8GL3HnDfcEGZ9ZOccwbKENAwS3Ro7lVhqpg=
