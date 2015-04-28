@@ -43,13 +43,14 @@ group :development, :test do
 gem "codeclimate-test-reporter", group: :test, require: nil
 end
 
+gem 'rubocop', '~> 0.30.1', require: false
+
 group :test do
   gem 'rspec-rails', '~> 3.0'
   gem 'vcr', '~> 2.9'
   gem 'webmock', '~> 1.21'
   gem 'guard', '~> 2.12'
   gem 'guard-rspec', require: false
-  gem 'rubocop', '~> 0.30.1', require: false
   gem 'simplecov', '~> 0.10', :require => false
 end
 
