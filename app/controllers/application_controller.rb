@@ -3,6 +3,11 @@ class ApplicationController < ActionController::Base
   # For APIs, you may want to use :null_session instead.
   protect_from_forgery with: :null_session
 
+  rescue_from Exception do |exception|
+    render_error_json(exception) if request.content_type =~ /json/
+    fail exception unless request.content_type =~ /json/
+  end
+
   def json(data)
     params[:pretty] ? JSON.pretty_generate(data) : data
   end
@@ -16,9 +21,11 @@ class ApplicationController < ActionController::Base
   end
 
   def json_error(message)
-    { 'status' => 'failure',
-      'error' => {
-        'message' => message }
+    result = { 'status' => 'failure',
+               'error' => {
+                 'message' => message
+               }
     }
+    json result
   end
 end
