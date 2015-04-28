@@ -1,8 +1,7 @@
 language: ruby
 sudo: false
 env:
-  - RESPONSYS_USER=user
-  - RESPONSYS_PASSWORD=password
+  - RESPONSYS_USER=user RESPONSYS_PASSWORD=password
 addons:
   code_climate:
     repo_token:
