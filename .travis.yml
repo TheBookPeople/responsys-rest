@@ -7,3 +7,11 @@ addons:
   code_climate:
     repo_token:
       secure: dDiE10CxPcHxy9GPtYcp9o+5IKwzJqUuoGSoygmGTKdENKoaYQFkwoqy0BPFQSCRgWnIy6qNad3SnF8WpOJyya0uGccPrP/Jbs/iyZ9SfcyiYZ6IX3MKblYq/ao+4/2SzwoFGLGz8GL3HnDfcEGZ9ZOccwbKENAwS3Ro7lVhqpg=
+deploy:
+  provider: heroku
+  api_key:
+    secure: jqJWUP0Omg9uM9ddA5mOQnzuGQjVJkyhenx6B5uhHbylknWW8g6/3Jb02BbfqvJ0sn8JPVd4wnYVtz3vUaHx8LbLsxLdi90tIFtjU19gJcRcOKCmO7o5Z3bkKj26wgQ/7yEZN4y10zaYuTwpJAdtMLGslZyCK8N/xUCw0YpLjs4=
+  app: responsys-rest
+  on:
+    repo: TheBookPeople/responsys-rest
+    branch: develop
