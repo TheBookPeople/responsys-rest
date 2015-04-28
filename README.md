@@ -1,4 +1,4 @@
-=Rest interface for Responsys API
+#Rest interface for Responsys API
 
 Rest based interface for the Responsys SOAP API. Based on the [responsys-api](https://github.com/dandemeyere/responsys-api) gem by dandemeyere. 
 
