@@ -20,4 +20,6 @@
 # available at http://guides.rubyonrails.org/i18n.html.
 
 en:
-  hello: "Hello world"
+  errors:
+    invalid_record_data: 'Invalid record_data must have at least one record'
+    invalid_match_column: 'Invalid value for match_column must one of the following. RIID, CUSTOMER_ID, EMAIL_ADDRESS or MOBILE_NUMBER'

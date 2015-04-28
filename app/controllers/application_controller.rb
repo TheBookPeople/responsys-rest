@@ -7,15 +7,18 @@ class ApplicationController < ActionController::Base
     params[:pretty] ? JSON.pretty_generate(data) : data
   end
 
-
   def validate_param_exists(param)
-    render(:status => :bad_request, :json => json_error("Missing #{param} parameter")) unless params.has_key?(param)
+    render_error_json("Missing #{param} parameter") unless params.key?(param)
+  end
+
+  def render_error_json(message)
+    render(status: :bad_request, json: json_error(message))
   end
 
   def json_error(message)
-    {"status"=>"failure",
-     "error"=> {
-      "message"=>message}
+    { 'status' => 'failure',
+      'error' => {
+        'message' => message }
     }
   end
 end

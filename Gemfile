@@ -18,9 +18,7 @@ gem 'jquery-rails'
 # Build JSON APIs with ease. Read more: https://github.com/rails/jbuilder
 gem 'jbuilder', '~> 2.0'
 
-
-gem "responsys-api", :git => 'https://github.com/TheBookPeople/responsys-api.git',  :branch => 'upgrade-for-rails-4.2'
-
+gem 'responsys-api', git: 'https://github.com/TheBookPeople/responsys-api.git',  branch: 'upgrade-for-rails-4.2'
 
 gem 'puma', '~> 2.11'
 
@@ -46,8 +44,9 @@ group :development, :test do
   gem 'rspec-rails', '~> 3.0'
   gem 'vcr', '~> 2.9'
   gem 'webmock', '~> 1.21'
-  gem 'guard'
-   gem 'guard-rspec', require: false
+  gem 'guard', '~> 2.12'
+  gem 'guard-rspec', require: false
+  gem 'rubocop', '~> 0.30.1', require: false
 end
 
 group :production do

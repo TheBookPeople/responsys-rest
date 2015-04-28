@@ -1,0 +1,12 @@
+AllCops:
+  RunRailsCops: true
+  Excludes:
+    - db/**/*
+    - config/**/*
+    - Gemfile
+    - bin/**/*
+    - spec/**/*
+Metrics/LineLength:
+  Max: 140
+Documentation:
+  Enabled: false
