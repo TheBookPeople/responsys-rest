@@ -28,6 +28,7 @@
               <li><a href="#profile-extension-merge">Merge</a></li>
              </ul>
            </li>
+             <li><a href="#status">Status</a></li>
       </ul>
     </div>
   </div>
@@ -286,6 +287,53 @@ Transfer-Encoding: chunked
       "error_message": null
     }
   ]
+}
+</code>
+</pre>
+
+<h2><a name="status">Status</a></h2>
+
+  <p>Query service status</p>
+ <h3>URL Structure</h3>
+<pre>
+GET <%= api_v1_status_url %>
+</pre>
+
+
+  <h3>Example</h3>
+
+<pre class="terminal">
+<code class="language-bash">
+curl -i -L <%= api_v1_status_url %>\?pretty\=true
+</code>
+<code class="language-http">
+HTTP/1.1 200 OK
+X-Frame-Options: SAMEORIGIN
+X-XSS-Protection: 1; mode=block
+X-Content-Type-Options: nosniff
+X-TBP-Version: 0.0.1
+Content-Type: application/json; charset=utf-8
+ETag: W/"448411da9ee8a353fdca26d1517c0754"
+Cache-Control: max-age=0, private, must-revalidate
+X-Request-Id: 39fbd052-019c-4b5f-b15a-2395c2ca7993
+X-Runtime: 3.194279
+Transfer-Encoding: chunked
+</code>
+<code class="language-javascript">
+{
+  "name": "responsys-rest",
+  "version": "0.0.1",
+  "hostname": "wgriffiths-box",
+  "errors": [
+
+  ],
+  "checks": [
+    "Responsys API"
+  ],
+  "timestamp": "2015-04-29 16:58:37",
+  "uptime": "0d:00:06:16",
+  "diskUsage": "55%",
+  "status": "Online"
 }
 </code>
 </pre>

@@ -45,6 +45,8 @@ end
 
 gem 'rubocop', '~> 0.30.1', require: false
 
+gem 'sys-filesystem', '~> 1.1'
+
 group :test do
   gem 'rspec-rails', '~> 3.0'
   gem 'vcr', '~> 2.9'
@@ -52,6 +54,7 @@ group :test do
   gem 'guard', '~> 2.12'
   gem 'guard-rspec', require: false
   gem 'simplecov', '~> 0.10', :require => false
+  gem 'timecop', '~> 0.7'
 end
 
 group :production do

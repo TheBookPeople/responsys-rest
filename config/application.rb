@@ -30,6 +30,7 @@ module ResponsysRest
     # config.i18n.default_locale = :de
     #
     config.app_version = '0.0.1'
+    config.boot_time = Time.now
     config.action_dispatch.default_headers.merge!('X-TBP-Version' => config.app_version)
     
   end

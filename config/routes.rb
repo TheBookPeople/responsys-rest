@@ -3,6 +3,7 @@ Rails.application.routes.draw do
     namespace :v1 do
       post '/search' => 'search#create'
       post '/profile_extensions' => 'profile_extension#create'
+      get '/status' => 'status#index'
     end
   end
 
