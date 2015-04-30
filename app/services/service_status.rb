@@ -22,8 +22,10 @@ class ServiceStatus
     uri = URI(url)
     begin
       res = Net::HTTP.get_response(uri)
+      puts "#{res} #{url}"
       @errors << name unless res.is_a?(Net::HTTPSuccess)
     rescue
+      puts "exception #{url}"
       @errors << name
     end
   end
