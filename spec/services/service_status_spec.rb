@@ -108,7 +108,7 @@ describe ServiceStatus do
     end
 
     it 'fail' do
-      @instance.add_http_get_check('Responsys API', 'http://www.example.com')
+      @instance.add_http_get_check('Responsys API', 'https://foobar.responsys.net/webservices/wsdl/ResponsysWS_Level1.wsdl')
       expect(@instance.checks).to eql ['Responsys API']
       expect(@instance.errors).to eql ['Responsys API']
       expect(@instance.status).to eql 'Error'
