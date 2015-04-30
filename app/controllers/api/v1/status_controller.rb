@@ -4,7 +4,6 @@ require 'service_status'
 module Api
   module V1
     class StatusController < ApplicationController
-
       def index
         service_status.add_http_get_check('Responsys API', 'https://ws2.responsys.net/webservices/wsdl/ResponsysWS_Level1.wsdl')
         status = service_status.online? ? :ok : :service_unavailable
@@ -28,7 +27,6 @@ module Api
       def app_name
         'responsys-rest'
       end
-
     end
   end
 end

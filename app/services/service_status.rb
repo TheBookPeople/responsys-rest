@@ -1,6 +1,6 @@
 require 'pp'
 require 'net/http'
-require "uri"
+require 'uri'
 require 'socket'
 require 'sys/filesystem'
 
@@ -29,7 +29,7 @@ class ServiceStatus
   end
 
   def status
-    online? ? "Online" : "Error"
+    online? ? 'Online' : 'Error'
   end
 
   def online?
@@ -42,23 +42,23 @@ class ServiceStatus
     minutes = (total_seconds / 60) % 60
     hours = total_seconds / (60 * 60)
     days = total_seconds / (60 * 60 * 24)
-    format("%01dd:%02d:%02d:%02d",days, hours, minutes, seconds)
+    format('%01dd:%02d:%02d:%02d', days, hours, minutes, seconds)
   end
 
   def disk_usage
-    format('%01d%%', (disk_used / disk_size ) * 100)
+    format('%01d%%', (disk_used / disk_size) * 100)
   end
 
   def to_json(*a)
-    {:name => name,
-     :version => version,
-     :hostname => hostname,
-     :errors => errors,
-     :checks => checks,
-     :timestamp => timestamp,
-     :uptime => uptime,
-     :diskUsage => disk_usage,
-     :status => status}.to_json(*a)
+    { name: name,
+      version: version,
+      hostname: hostname,
+      errors: errors,
+      checks: checks,
+      timestamp: timestamp,
+      uptime: uptime,
+      diskUsage: disk_usage,
+      status: status }.to_json(*a)
   end
 
   private
@@ -76,8 +76,6 @@ class ServiceStatus
   end
 
   def filesystem
-    @stats ||= Sys::Filesystem.stat("/")
+    @stats ||= Sys::Filesystem.stat('/')
   end
-
 end
-
