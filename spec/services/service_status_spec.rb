@@ -8,7 +8,7 @@ describe ServiceStatus do
     @version = '0.0.1'
     @hostname = Socket.gethostname
     @app_name = 'killer-app'
-    @instance = ServiceStatus.new(@app_name, @version, Time.now)
+    @instance = ServiceStatus.new(@app_name, @version, Time.zone.now)
   end
 
   it 'name' do
@@ -33,8 +33,8 @@ describe ServiceStatus do
 
   it 'timestamp' do
     Timecop.freeze
-    @instance = ServiceStatus.new(@app_name, @version, Time.now)
-    timestamp =  Time.new.strftime '%Y-%m-%d %T' 
+    @instance = ServiceStatus.new(@app_name, @version, Time.zone.now)
+    timestamp =  Time.zone.now.strftime '%Y-%m-%d %T' 
     expect(@instance.timestamp).to eql timestamp
     Timecop.return
   end
@@ -88,8 +88,8 @@ describe ServiceStatus do
   end
 
   it 'to_json' do
-    Timecop.freeze(Time.local(2015,04,29,14,52,47))
-    @instance = ServiceStatus.new(@app_name, @version, Time.now)
+    Timecop.freeze(Time.zone.local(2015,04,29,14,52,47))
+    @instance = ServiceStatus.new(@app_name, @version, Time.zone.now)
     stats = double("stats")
     expect(stats).to receive(:blocks) { '239189165' }
     expect(stats).to receive(:blocks_available) { '106180000' }

@@ -13,7 +13,7 @@ class ServiceStatus
     @version = version
     @hostname = Socket.gethostname
     @checks = []
-    @timestamp = Time.new.strftime('%Y-%m-%d %T')
+    @timestamp = Time.zone.now.strftime('%Y-%m-%d %T')
     @errors = []
   end
 
@@ -37,7 +37,7 @@ class ServiceStatus
   end
 
   def uptime
-    total_seconds = Time.now - @boot_time
+    total_seconds = Time.zone.now - @boot_time
     seconds = total_seconds % 60
     minutes = (total_seconds / 60) % 60
     hours = total_seconds / (60 * 60)
