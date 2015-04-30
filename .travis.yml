@@ -9,6 +9,7 @@ addons:
       secure: dDiE10CxPcHxy9GPtYcp9o+5IKwzJqUuoGSoygmGTKdENKoaYQFkwoqy0BPFQSCRgWnIy6qNad3SnF8WpOJyya0uGccPrP/Jbs/iyZ9SfcyiYZ6IX3MKblYq/ao+4/2SzwoFGLGz8GL3HnDfcEGZ9ZOccwbKENAwS3Ro7lVhqpg=
 before_deploy:
 - env
+- ls -l ~
 - export HOME=/tmp
 - export APP_VERSION=$(bundle exec rake responsys_rest:version)
 - bundle exec pkgr package . --name='responsys-rest' --vendor='The Bookpeople Ltd
