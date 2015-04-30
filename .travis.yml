@@ -22,9 +22,9 @@ deploy:
       repo: TheBookPeople/responsys-rest
       branch: develop
   - provider: heroku
-     api_key:
-       secure: jqJWUP0Omg9uM9ddA5mOQnzuGQjVJkyhenx6B5uhHbylknWW8g6/3Jb02BbfqvJ0sn8JPVd4wnYVtz3vUaHx8LbLsxLdi90tIFtjU19gJcRcOKCmO7o5Z3bkKj26wgQ/7yEZN4y10zaYuTwpJAdtML
-     app: responsys-rest
-     on:
-       repo: TheBookPeople/responsys-rest
-       branch: develop
+    api_key:
+      secure: jqJWUP0Omg9uM9ddA5mOQnzuGQjVJkyhenx6B5uhHbylknWW8g6/3Jb02BbfqvJ0sn8JPVd4wnYVtz3vUaHx8LbLsxLdi90tIFtjU19gJcRcOKCmO7o5Z3bkKj26wgQ/7yEZN4y10zaYuTwpJAdtML
+    app: responsys-rest
+    on:
+      repo: TheBookPeople/responsys-rest
+      branch: develop
