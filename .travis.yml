@@ -24,8 +24,8 @@ deploy:
       tags: true
   - provider: heroku
     api_key:
-    app: responsys-rest
       secure: "kWH5VQ6hjO65M4WFHYy2JZ0pCHo4ep1fc/KFyeltmIgwkU5SoU5tqI9Dedt5NxRkLxSKAVh+uxxalGcFO85M9GvehVqw4w4JG9iRW6LiJeEfG+ySzETv/iEuun7Gsctv2kUsFeZBBaiMAZGXxAoV+WXSV6ugiX6Bl1sq4lEgwfE="
+    app: responsys-rest
     on:
       repo: TheBookPeople/responsys-rest
       branch: develop
