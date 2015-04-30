@@ -17,15 +17,15 @@ before_deploy:
 deploy:
   - provider: releases
     api_key:
-      secure: ayn/GHBtBcH/omRVAf61/tT/VQRWKlHZ9L2ExkE2QuaW8+Azl5ZAMg6eqhzRVDUo7u80oJuAD2Q0EAGpNvwiNVWmqqhrBOYlcsUTFy+B57PdREjcYp498Y84IS5d24MX2mhaScuqRTeZ3nLtr2eP2ljm0AmzyWljsFCEfUi/GMY=
+      secure: "ayn/GHBtBcH/omRVAf61/tT/VQRWKlHZ9L2ExkE2QuaW8+Azl5ZAMg6eqhzRVDUo7u80oJuAD2Q0EAGpNvwiNVWmqqhrBOYlcsUTFy+B57PdREjcYp498Y84IS5d24MX2mhaScuqRTeZ3nLtr2eP2ljm0AmzyWljsFCEfUi/GMY="
     file: "${HOME}/build/${TRAVIS_REPO_SLUG}/${DEB_FILE}"
     on:
       repo: TheBookPeople/responsys-rest
       tags: true
   - provider: heroku
     api_key:
-      secure: jqJWUP0Omg9uM9ddA5mOQnzuGQjVJkyhenx6B5uhHbylknWW8g6/3Jb02BbfqvJ0sn8JPVd4wnYVtz3vUaHx8LbLsxLdi90tIFtjU19gJcRcOKCmO7o5Z3bkKj26wgQ/7yEZN4y10zaYuTwpJAdtML
     app: responsys-rest
+      secure: "kWH5VQ6hjO65M4WFHYy2JZ0pCHo4ep1fc/KFyeltmIgwkU5SoU5tqI9Dedt5NxRkLxSKAVh+uxxalGcFO85M9GvehVqw4w4JG9iRW6LiJeEfG+ySzETv/iEuun7Gsctv2kUsFeZBBaiMAZGXxAoV+WXSV6ugiX6Bl1sq4lEgwfE="
     on:
       repo: TheBookPeople/responsys-rest
       branch: develop
