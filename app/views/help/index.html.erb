@@ -44,7 +44,15 @@
   <p>
     The Responsys REST API is used by TBP to interact with Responsys.
   </p>
+  <h2><a name="runstatuscheck">Current Status</a></h2>
 
+  <div class="progress" id="status-check-progress">
+      <div class="progress-bar progress-bar-striped active" role="progressbar" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100" style="width: 100%">
+        Checking Status
+      </div>
+    </div>
+
+    <div id="status-results"></div>
   <h2><a name="search">Credentials</a></h2>
 
   <p>
@@ -60,8 +68,8 @@
 
   <pre class="terminal">
     <code class="language-bash">
-    export RESPONSYS_USER=user
-    export RESPONSYS_PASSWORD=password
+export RESPONSYS_USER=user
+export RESPONSYS_PASSWORD=password
     </code>
   </pre>
 
@@ -70,7 +78,7 @@
   
   <pre class="terminal">
     <code class="language-bash">
-    export RESPONSYS_DEBUG=true
+export RESPONSYS_DEBUG=true
     </code>
   </pre>
 

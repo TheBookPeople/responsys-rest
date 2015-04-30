@@ -24,7 +24,6 @@
       htmlBridge
         .data('placement', 'top')
         .attr('title', 'Copy command to clipboard')
-        .tooltip()
     })
 
     // Copy to clipboard

@@ -4,7 +4,6 @@
 	$(function() {
 
 		var processResponse = function(data) {
-			console.log(data);
 			if (!data) {
 				data = {
 					status : 'No Data'
@@ -32,7 +31,7 @@
 				}
 			}
 
-			$.get('/mobile-proxy/v1/assets/statusresults.mst', function(template) {
+                        $.get("/mustache/statusresults.mst", function(template) {
 				var rendered = Mustache.render(template, data);
 				$('#status-check-progress').hide();
 				$('#status-results').html(rendered);
@@ -40,12 +39,12 @@
 			});
 		};
 
-		//$.getJSON("/mobile-proxy/v1/status")
-		//   .done(function(data, textStatus, jqXHR) {
-		//			processResponse(data);})
-		//	.fail(function(jqXHR, textStatus, errorThrown) {
-		//	        processResponse(jqXHR.responseJSON);
-		//     });
+                $.getJSON("<%= Rails.application.routes.url_helpers.api_v1_status_path %>")
+		   .done(function(data, textStatus, jqXHR) {
+					processResponse(data);})
+			.fail(function(jqXHR, textStatus, errorThrown) {
+			        processResponse(jqXHR.responseJSON);
+		     });
 	});
 
 }(jQuery)

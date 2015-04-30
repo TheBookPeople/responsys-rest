@@ -1,45 +1,28 @@
 @font-face {
   font-family: 'octicons';
-  src: url('octicons.eot?#iefix') format('embedded-opentype'),
-       url('octicons.woff') format('woff'),
-       url('octicons.ttf') format('truetype'),
-       url('octicons.svg#octicons') format('svg');
+  src: font-url('octicons/octicons.eot?#iefix') format('embedded-opentype'),
+       font-url('octicons/octicons.woff') format('woff'),
+       font-url('octicons/octicons.ttf') format('truetype'),
+       font-url('octicons/octicons.svg#octicons') format('svg');
   font-weight: normal;
   font-style: normal;
 }
 
-/*
-
-.octicon is optimized for 16px.
-.mega-octicon is optimized for 32px but can be used larger.
-
-*/
-.octicon {
-  font: normal normal 16px octicons;
-  line-height: 1;
+// .octicon is optimized for 16px.
+// .mega-octicon is optimized for 32px but can be used larger.
+.octicon, .mega-octicon {
+  font: normal normal normal 16px/1 octicons;
   display: inline-block;
   text-decoration: none;
+  text-rendering: auto;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   -webkit-user-select: none;
   -moz-user-select: none;
   -ms-user-select: none;
   user-select: none;
-  cursor: default;
 }
-.mega-octicon {
-  font: normal normal 32px octicons;
-  line-height: 1;
-  display: inline-block;
-  text-decoration: none;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  -webkit-user-select: none;
-  -moz-user-select: none;
-  -ms-user-select: none;
-  user-select: none;
-  cursor: default;
-}
+.mega-octicon { font-size: 32px; }
 
 .octicon-alert:before { content: '\f02d'} /*  */
 .octicon-alignment-align:before { content: '\f08a'} /*  */
@@ -140,7 +123,7 @@
 .octicon-jump-up:before { content: '\f073'} /*  */
 .octicon-key:before { content: '\f049'} /*  */
 .octicon-keyboard:before { content: '\f00d'} /*  */
-.octicon-law:before { content: '\f0d8'} /*  */
+.octicon-law:before { content: '\f0d8'} /*  */
 .octicon-light-bulb:before { content: '\f000'} /*  */
 .octicon-link:before { content: '\f05c'} /*  */
 .octicon-link-external:before { content: '\f07f'} /*  */
@@ -163,7 +146,7 @@
 .octicon-milestone:before { content: '\f075'} /*  */
 .octicon-mirror-public:before,
 .octicon-mirror:before { content: '\f024'} /*  */
-.octicon-mortar-board:before { content: '\f0d7'} /*  */
+.octicon-mortar-board:before { content: '\f0d7'} /*  */
 .octicon-move-down:before { content: '\f0a8'} /*  */
 .octicon-move-left:before { content: '\f074'} /*  */
 .octicon-move-right:before { content: '\f0a9'} /*  */
@@ -233,6 +216,8 @@
 .octicon-telescope:before { content: '\f088'} /*  */
 .octicon-terminal:before { content: '\f0c8'} /*  */
 .octicon-three-bars:before { content: '\f05e'} /*  */
+.octicon-thumbsdown:before { content: '\f0db'} /*  */
+.octicon-thumbsup:before { content: '\f0da'} /*  */
 .octicon-tools:before { content: '\f031'} /*  */
 .octicon-trashcan:before { content: '\f0d0'} /*  */
 .octicon-triangle-down:before { content: '\f05b'} /*  */
