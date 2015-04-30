@@ -7,11 +7,24 @@ addons:
   code_climate:
     repo_token:
       secure: dDiE10CxPcHxy9GPtYcp9o+5IKwzJqUuoGSoygmGTKdENKoaYQFkwoqy0BPFQSCRgWnIy6qNad3SnF8WpOJyya0uGccPrP/Jbs/iyZ9SfcyiYZ6IX3MKblYq/ao+4/2SzwoFGLGz8GL3HnDfcEGZ9ZOccwbKENAwS3Ro7lVhqpg=
+before_deploy:
+- bundle exec pkgr package . --name='responsys-rest' --vendor='The Bookpeople Ltd
+  <https://github.com/TheBookPeople/responsys-rest>' --description='Rest web service
+  for Responsys' --license='GPL-3.0'
+- export DEB_FILE=$(find .  -name 'responsys-rest_*.deb' -exec basename {} \;)
+- echo "Deploying deb $DEB_FILE to GitHub releases"
 deploy:
-  provider: heroku
-  api_key:
-    secure: jqJWUP0Omg9uM9ddA5mOQnzuGQjVJkyhenx6B5uhHbylknWW8g6/3Jb02BbfqvJ0sn8JPVd4wnYVtz3vUaHx8LbLsxLdi90tIFtjU19gJcRcOKCmO7o5Z3bkKj26wgQ/7yEZN4y10zaYuTwpJAdtMLGslZyCK8N/xUCw0YpLjs4=
-  app: responsys-rest
-  on:
-    repo: TheBookPeople/responsys-rest
-    branch: develop
+  - provider: releases
+    api_key:
+      secure: ayn/GHBtBcH/omRVAf61/tT/VQRWKlHZ9L2ExkE2QuaW8+Azl5ZAMg6eqhzRVDUo7u80oJuAD2Q0EAGpNvwiNVWmqqhrBOYlcsUTFy+B57PdREjcYp498Y84IS5d24MX2mhaScuqRTeZ3nLtr2eP2ljm0AmzyWljsFCEfUi/GMY=
+    file: "${HOME}/build/${TRAVIS_REPO_SLUG}/${DEB_FILE}"
+    on:
+      repo: TheBookPeople/responsys-rest
+      branch: develop
+  - provider: heroku
+     api_key:
+       secure: jqJWUP0Omg9uM9ddA5mOQnzuGQjVJkyhenx6B5uhHbylknWW8g6/3Jb02BbfqvJ0sn8JPVd4wnYVtz3vUaHx8LbLsxLdi90tIFtjU19gJcRcOKCmO7o5Z3bkKj26wgQ/7yEZN4y10zaYuTwpJAdtML
+     app: responsys-rest
+     on:
+       repo: TheBookPeople/responsys-rest
+       branch: develop

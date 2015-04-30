@@ -47,6 +47,8 @@ gem 'rubocop', '~> 0.30.1', require: false
 
 gem 'sys-filesystem', '~> 1.1'
 
+gem 'pkgr', '~> 1.4'
+
 group :test do
   gem 'rspec-rails', '~> 3.0'
   gem 'vcr', '~> 2.9'
@@ -60,3 +62,5 @@ end
 group :production do
   gem 'rails_12factor', '~> 0.0.3'
 end
+
+
