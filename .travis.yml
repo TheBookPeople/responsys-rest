@@ -13,7 +13,7 @@ before_deploy:
 - export APP_VERSION=$(bundle exec rake responsys_rest:version)
 - bundle exec pkgr package . --name='responsys-rest' --vendor='The Bookpeople Ltd
   <https://github.com/TheBookPeople/responsys-rest>' --description='Rest web service
-  for Responsys' --license='GPL-3.0' --version=$APP_VERSION --maintainer='bangordevelopment@thebookpeople.co.uk' --env "HOME=/home/travis"
+  for Responsys' --license='GPL-3.0' --version=$APP_VERSION --maintainer='bangordevelopment@thebookpeople.co.uk' --env "HOME=/home/travis" "RESPONSYS_USER=user" "RESPONSYS_PASSWORD=password"
 - export DEB_FILE=$(find .  -name 'responsys-rest_*.deb' -exec basename {} \;)
 - echo "Deploying deb $DEB_FILE to GitHub releases"
 deploy:
