@@ -5,17 +5,14 @@
 Rails application that provides a rest based interface for the Responsys SOAP API. Based on the [responsys-api](https://github.com/dandemeyere/responsys-api) gem by [dandemeyere](https://github.com/dandemeyere/). 
 
 ## Documentation
-
 The documentation is included as part of the application. We have a demo version deployed to Heroku, none of the calls will work as the Responsys credentials are invalid.  https://responsys-rest.herokuapp.com/. If you have any questions or if you want to report a bug please create an [issue](https://github.com/TheBookPeople/responsys-rest/issues).
 
 ## Installation
-
 You can checkout the repository and run as a normal Rails app, or install the application using a deb from [releases](https://github.com/TheBookPeople/responsys-rest/releases).
 
 The deb has been created using [pkgr](https://github.com/crohr/pkgr).
 
 ### Installation From Source
-
 ```bash
 git clone git@github.com:TheBookPeople/responsys-rest.git
 cd responsys-rest
@@ -27,20 +24,16 @@ bundle exec rails s -b0.0.0.0
 ```
 
 ### Installation From Deb
-
 Download deb file from [releases](https://github.com/TheBookPeople/responsys-rest/releases)
-
 ```bash
 sudo apt-get install mysql-common
 sudo dpkg -i responsys-rest_[VERSION]_amd64.deb
 sudo vi /etc/responsys-rest/conf.d/other
 ```
 #### Set Enviroment Variables
-
 ```bash
 sudo vi /etc/responsys-rest/conf.d/other
 ```
-
 ```vim
 export RESPONSYS_USER=user
 export RESPONSYS_PASSWORD=password
@@ -67,7 +60,6 @@ bundle exec rspec
 ```
 
 ## Contributing
-
 We use [gitflow](http://nvie.com/posts/a-successful-git-branching-model/) to manage our git workflow.
 
 1. Fork it
