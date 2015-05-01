@@ -19,6 +19,10 @@
 require 'simplecov'
 SimpleCov.start 'rails'
 
+SimpleCov.configure do
+    minimum_coverage '100%'
+end
+
 require "codeclimate-test-reporter"
 CodeClimate::TestReporter.start
 

@@ -4,8 +4,7 @@ class ApplicationController < ActionController::Base
   protect_from_forgery with: :null_session
 
   rescue_from Exception do |exception|
-    render_error_json(exception) if request.content_type =~ /json/
-    fail exception unless request.content_type =~ /json/
+    json_request? ? render_error_json(exception.message) : fail(exception)
   end
 
   def json(data)
@@ -18,6 +17,12 @@ class ApplicationController < ActionController::Base
 
   def render_error_json(message)
     render(status: :bad_request, json: json_error(message))
+  end
+
+  private
+
+  def json_request?
+    request.content_type =~ /json/
   end
 
   def json_error(message)
