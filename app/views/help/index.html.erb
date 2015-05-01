@@ -1,0 +1,350 @@
+<script>
+    var shiftWindow = function() { scrollBy(0, -50) };
+    if (location.hash) shiftWindow();
+    window.addEventListener("hashchange", shiftWindow);
+</script>
+
+<nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#docs-collapse">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="#"><%= @version %></a>
+    </div>
+    <div class="collapse navbar-collapse" id="docs-collapse">
+      <ul class="nav navbar-nav">
+        <li><a href="#credentials">Credentials</a></li>
+        <li><a href="#debug">Debug</a></li>
+        <li><a href="#search">Search</a></li>
+         <li role="presentation" class="dropdown">
+             <a class="dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-expanded="false">
+               Profile Extension <span class="caret"></span>
+             </a>
+             <ul class="dropdown-menu" role="menu">
+              <li><a href="#profile-extension-merge">Merge</a></li>
+             </ul>
+           </li>
+             <li><a href="#status">Status</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<section class="container-fluid docs-section" >
+
+
+
+
+  <h1>Responsys REST API Help</h1>
+
+  <p>
+    The Responsys REST API is used by TBP to interact with Responsys.
+  </p>
+  <h2><a name="runstatuscheck">Current Status</a></h2>
+
+  <div class="progress" id="status-check-progress">
+      <div class="progress-bar progress-bar-striped active" role="progressbar" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100" style="width: 100%">
+        Checking Status
+      </div>
+    </div>
+
+    <div id="status-results"></div>
+  <h2><a name="search">Credentials</a></h2>
+
+  <p>
+    In order for the REST API to interact with Responsys
+    the API requires a valid username and password. These
+    are configured using two environment variables.
+  </p>
+
+  <p>
+    These environment variables need to be set before
+    the server is started.
+  </p>
+
+  <pre class="terminal">
+    <code class="language-bash">
+export RESPONSYS_USER=user
+export RESPONSYS_PASSWORD=password
+    </code>
+  </pre>
+
+  <h2><a name="debug">Responsys Debug</a></h2>
+  <p>If you need to debug the calls made to Responsys. The following enviroment variable can be set to true.</p>
+  
+  <pre class="terminal">
+    <code class="language-bash">
+export RESPONSYS_DEBUG=true
+    </code>
+  </pre>
+
+  <h2><a name="search">Search List</a></h2>
+
+  <p>Search for customers within a list based. If the query returnes more
+  than 200 results the data will be truncated at 200.</p>
+
+ 
+
+
+
+
+  <h3>URL Structure</h3>
+<pre>
+POST <%= api_v1_search_url %>
+</pre>
+
+ <h3>Parameters</h3>
+
+<table class="table table-hover">
+      <thead>
+        <tr>
+          <th>Parameter</th>
+          <th>Required</th>
+          <th>Decription</th>          
+        </tr>
+      </thead>
+      <tbody>
+        <tr>       
+          <td>list</td>
+          <td>Yes</td>
+          <td>List name</td>
+        </tr>
+        <tr>       
+          <td>folder</td>
+          <td>Yes</td>
+          <td>Folder name that contains list</td>
+        </tr>
+        <tr>     
+          <td>query_column</td>
+          <td>Yes</td>
+          <td>The query column can only be one of the following 
+            fields. RIID, CUSTOMER_ID, EMAIL_ADDRESS and MOBILE_NUMBER
+  </ul>
+          </td>
+        </tr>
+        <tr>     
+          <td>query_data</td>
+          <td>Yes</td>
+          <td>Comma seperated list of values to match against query_column.</td>
+        </tr>
+        <tr>     
+          <td>result_columns</td>
+          <td>No</td>
+          <td>Columns that will be returned for results. Can be any columns that exist in selected list. If not specified the following
+          columns will be returned, RIID, CUSTOMER_ID, EMAIL_ADDRESS and MOBILE_NUMBER. </td>
+        </tr>
+      </tbody>
+    </table>
+
+
+
+  <h3>Example</h3>
+
+<pre class="terminal">
+<code class="language-bash">
+curl -X POST -i -L -H "Content-Type: application/json"  <%= api_v1_search_url %>\?pretty\=true -d'
+{
+ "list" : "z_Notifications_Email_list",
+ "folder" : "z_Notifications",
+ "query_column" : "EMAIL_ADDRESS",
+ "query_data" : "user1@example.com, user2@example.com",
+ "result_columns" : "EMAIL_DELIVERABILITY_STATUS_, EMAIL_MD5_HASH_"
+}'
+
+</code>
+<code class="language-http">
+HTTP/1.1 200 OK
+X-Frame-Options: SAMEORIGIN
+X-XSS-Protection: 1; mode=block
+X-Content-Type-Options: nosniff
+X-TBP-Version: 0.0.1
+Content-Type: application/json; charset=utf-8
+ETag: W/"d53fa60898ffa39031bc8e13f28b097c"
+Cache-Control: max-age=0, private, must-revalidate
+X-Request-Id: 1dad3543-0b03-4922-b429-860c9afb1a85
+X-Runtime: 5.021401
+Transfer-Encoding: chunked
+</code>
+<code class="language-javascript">
+{
+  "status": "ok",
+  "data": [
+    {
+      "EMAIL_DELIVERABILITY_STATUS_": "D",
+      "EMAIL_MD5_HASH_": "111d68d06e2d317b5a59c2c6c5bad808"
+    },
+    {
+      "EMAIL_DELIVERABILITY_STATUS_": "D",
+      "EMAIL_MD5_HASH_": "ab53a2911ddf9b4817ac01ddcd3d975f"
+    },
+    {
+      "EMAIL_DELIVERABILITY_STATUS_": "D",
+      "EMAIL_MD5_HASH_": "111d68d06e2d317b5a59c2c6c5bad808"
+    }
+  ]
+}
+</code>
+</pre>
+
+ <h2><a name="profile-extension-merge">Merge into Profile Extension Table</a></h2>
+
+  <p>Use to insert or update records in a Profile
+Extension Table. Individual invocations of this API call are limited to 200 records. If
+you need to process more than 200 records, you should place multiple calls.</p>
+ <h3>URL Structure</h3>
+<pre>
+POST <%= api_v1_profile_extensions_url %>
+</pre>
+
+<h3>Parameters</h3>
+
+<table class="table table-hover">
+      <thead>
+        <tr>
+          <th>Parameter</th>
+          <th>Required</th>
+          <th>Decription</th>          
+        </tr>
+      </thead>
+      <tbody>
+        <tr>       
+          <td>profile_extension</td>
+          <td>Yes</td>
+          <td>Profile extension name.</td>
+        </tr>
+        <tr>       
+          <td>folder</td>
+          <td>Yes</td>
+          <td>Folder name that contains list</td>
+        </tr>
+        <tr>     
+          <td>record_data</td>
+          <td>Yes</td>
+          <td>An array of records to be inserted/updated in selected profile extension table. First column must
+            be value to match against match_column.
+  </ul>
+          </td>
+        </tr>
+        <tr>     
+          <td>match_column</td>
+          <td>Yes</td>
+          <td>The match column can only be one of the following 
+            fields. RIID, CUSTOMER_ID, EMAIL_ADDRESS and MOBILE_NUMBER. Its used to link records in the list with records in the profile extension.</td>
+        </tr>
+        <tr>     
+          <td>insert_on_no_match</td>
+          <td>Yes</td>
+          <td>Boolean value indicates if new record should be inserted if no match is found.</td>
+        </tr>
+          <tr>     
+          <td>update_on_match</td>
+          <td>Yes</td>
+          <td>Boolean value indicates if existing record should be updated.</td>
+        </tr>
+      </tbody>
+    </table>
+
+
+  <h3>Example</h3>
+
+<pre class="terminal">
+<code class="language-bash">
+curl -X POST -i -L -H "Content-Type: application/json"  <%= api_v1_profile_extensions_url %>\?pretty\=true -d'
+{  
+   "profile_extension":"CategoryPreferences",
+   "folder":"z_Notifications",
+   "record_data":[  
+      {  
+         "EMAIL_ADDRESS_":"user1@example.com",
+         "CATEGORY_1":"Childrens",
+         "PREFERENCE_1":"LIKE"
+      }
+   ],
+   "match_column":"EMAIL_ADDRESS",
+   "insert_on_no_match":true,
+   "update_on_match":true
+}'
+</code>
+<code class="language-http">
+HTTP/1.1 200 OK
+X-Frame-Options: SAMEORIGIN
+X-XSS-Protection: 1; mode=block
+X-Content-Type-Options: nosniff
+X-TBP-Version: 0.0.1
+Content-Type: application/json; charset=utf-8
+ETag: W/"2ea76884f422b1026eb75a3301826a1a"
+Cache-Control: max-age=0, private, must-revalidate
+X-Request-Id: 40180484-f0dc-428c-a259-48b4729cb6c1
+X-Runtime: 3.899849
+Transfer-Encoding: chunked
+</code>
+<code class="language-javascript">
+{
+  "status": "ok",
+  "result": [
+    {
+      "recipient_id": "449436402",
+      "error_message": null
+    },
+    {
+      "recipient_id": "449436406",
+      "error_message": null
+    }
+  ]
+}
+</code>
+</pre>
+
+<h2><a name="status">Status</a></h2>
+
+  <p>Query service status</p>
+ <h3>URL Structure</h3>
+<pre>
+GET <%= api_v1_status_url %>
+</pre>
+
+
+  <h3>Example</h3>
+
+<pre class="terminal">
+<code class="language-bash">
+curl -i -L <%= api_v1_status_url %>\?pretty\=true
+</code>
+<code class="language-http">
+HTTP/1.1 200 OK
+X-Frame-Options: SAMEORIGIN
+X-XSS-Protection: 1; mode=block
+X-Content-Type-Options: nosniff
+X-TBP-Version: 0.0.1
+Content-Type: application/json; charset=utf-8
+ETag: W/"448411da9ee8a353fdca26d1517c0754"
+Cache-Control: max-age=0, private, must-revalidate
+X-Request-Id: 39fbd052-019c-4b5f-b15a-2395c2ca7993
+X-Runtime: 3.194279
+Transfer-Encoding: chunked
+</code>
+<code class="language-javascript">
+{
+  "name": "responsys-rest",
+  "version": "0.0.1",
+  "hostname": "wgriffiths-box",
+  "errors": [
+
+  ],
+  "checks": [
+    "Responsys API"
+  ],
+  "timestamp": "2015-04-29 16:58:37",
+  "uptime": "0d:00:06:16",
+  "diskUsage": "55%",
+  "status": "Online"
+}
+</code>
+</pre>
+
+
+</section>

@@ -1,0 +1,63 @@
+---
+http_interactions:
+- request:
+    method: post
+    uri: https://ws2.responsys.net/webservices/services/ResponsysWSService
+    body:
+      encoding: UTF-8
+      string: <?xml version="1.0" encoding="UTF-8"?><env:Envelope xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:tns="urn:ws.rsys.com"
+        xmlns:env="http://schemas.xmlsoap.org/soap/envelope/"><env:Body><tns:login><tns:username>your_responsys_username</tns:username><tns:password>your_responsys_password</tns:password></tns:login></env:Body></env:Envelope>
+    headers: 
+  response:
+    status:
+      code: 200
+      message: OK
+    headers: 
+    body:
+      encoding: UTF-8
+      string: <?xml version='1.0' encoding='UTF-8'?><soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/"><soapenv:Body><loginResponse
+        xmlns="urn:ws.rsys.com"><result><sessionId>DEAR_SESSION_ID</sessionId></result></loginResponse></soapenv:Body></soapenv:Envelope>
+    http_version: 
+  recorded_at: Tue, 28 Apr 2015 10:22:31 GMT
+- request:
+    method: post
+    uri: https://ws2.responsys.net/webservices/services/ResponsysWSService
+    body:
+      encoding: UTF-8
+      string: <?xml version="1.0" encoding="UTF-8"?><env:Envelope xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:tns="urn:ws.rsys.com"
+        xmlns:env="http://schemas.xmlsoap.org/soap/envelope/"><env:Header><sessionHeader><sessionId>DEAR_SESSION_ID</sessionId></sessionHeader></env:Header><env:Body><tns:retrieveListMembers><tns:list><tns:folderName>z_Notifications</tns:folderName><tns:objectName>z_Notifications_Email_list</tns:objectName></tns:list><tns:queryColumn>EMAIL_ADDRESS</tns:queryColumn><tns:fieldList>EMAIL_DELIVERABILITY_STATUS_</tns:fieldList><tns:fieldList>EMAIL_MD5_HASH_</tns:fieldList><tns:idsToRetrieve>user1@example.com</tns:idsToRetrieve><tns:idsToRetrieve>user2@example.com</tns:idsToRetrieve></tns:retrieveListMembers></env:Body></env:Envelope>
+    headers: 
+  response:
+    status:
+      code: 200
+      message: OK
+    headers: 
+    body:
+      encoding: UTF-8
+      string: <?xml version='1.0' encoding='UTF-8'?><soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/"><soapenv:Body><retrieveListMembersResponse
+        xmlns="urn:ws.rsys.com"><result><recordData><fieldNames>EMAIL_DELIVERABILITY_STATUS_</fieldNames><fieldNames>EMAIL_MD5_HASH_</fieldNames><records><fieldValues>D</fieldValues><fieldValues>111d68d06e2d317b5a59c2c6c5bad808</fieldValues></records><records><fieldValues>D</fieldValues><fieldValues>ab53a2911ddf9b4817ac01ddcd3d975f</fieldValues></records><records><fieldValues>D</fieldValues><fieldValues>111d68d06e2d317b5a59c2c6c5bad808</fieldValues></records></recordData></result></retrieveListMembersResponse></soapenv:Body></soapenv:Envelope>
+    http_version: 
+  recorded_at: Tue, 28 Apr 2015 10:22:32 GMT
+- request:
+    method: post
+    uri: https://ws2.responsys.net/webservices/services/ResponsysWSService
+    body:
+      encoding: UTF-8
+      string: <?xml version="1.0" encoding="UTF-8"?><env:Envelope xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:tns="urn:ws.rsys.com"
+        xmlns:env="http://schemas.xmlsoap.org/soap/envelope/"><env:Header><sessionHeader><sessionId>DEAR_SESSION_ID</sessionId></sessionHeader></env:Header><env:Body><tns:logout></tns:logout></env:Body></env:Envelope>
+    headers: 
+  response:
+    status:
+      code: 200
+      message: OK
+    headers: 
+    body:
+      encoding: UTF-8
+      string: <?xml version='1.0' encoding='UTF-8'?><soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/"><soapenv:Body><logoutResponse
+        xmlns="urn:ws.rsys.com"><result>true</result></logoutResponse></soapenv:Body></soapenv:Envelope>
+    http_version: 
+  recorded_at: Tue, 28 Apr 2015 10:22:32 GMT
+recorded_with: VCR 2.9.3

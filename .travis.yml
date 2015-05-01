@@ -1,0 +1,33 @@
+language: ruby
+sudo: false
+env:
+  matrix:
+  - RESPONSYS_USER=user RESPONSYS_PASSWORD=password
+addons:
+  code_climate:
+    repo_token:
+      secure: dDiE10CxPcHxy9GPtYcp9o+5IKwzJqUuoGSoygmGTKdENKoaYQFkwoqy0BPFQSCRgWnIy6qNad3SnF8WpOJyya0uGccPrP/Jbs/iyZ9SfcyiYZ6IX3MKblYq/ao+4/2SzwoFGLGz8GL3HnDfcEGZ9ZOccwbKENAwS3Ro7lVhqpg=
+before_deploy:
+- env
+- ls -l ~
+- export APP_VERSION=$(bundle exec rake responsys_rest:version)
+- bundle exec pkgr package . --name='responsys-rest' --vendor='The Bookpeople Ltd
+  <https://github.com/TheBookPeople/responsys-rest>' --description='Rest web service
+  for Responsys' --license='GPL-3.0' --version=$APP_VERSION --maintainer='bangordevelopment@thebookpeople.co.uk' --env "HOME=/home/travis" "RESPONSYS_USER=user" "RESPONSYS_PASSWORD=password"
+- export DEB_FILE=$(find .  -name 'responsys-rest_*.deb' -exec basename {} \;)
+- echo "Deploying deb $DEB_FILE to GitHub releases"
+deploy:
+  - provider: releases
+    api_key:
+      secure: "ayn/GHBtBcH/omRVAf61/tT/VQRWKlHZ9L2ExkE2QuaW8+Azl5ZAMg6eqhzRVDUo7u80oJuAD2Q0EAGpNvwiNVWmqqhrBOYlcsUTFy+B57PdREjcYp498Y84IS5d24MX2mhaScuqRTeZ3nLtr2eP2ljm0AmzyWljsFCEfUi/GMY="
+    file: "${HOME}/build/${TRAVIS_REPO_SLUG}/${DEB_FILE}"
+    on:
+      repo: TheBookPeople/responsys-rest
+      tags: true
+  - provider: heroku
+    api_key:
+      secure: "kWH5VQ6hjO65M4WFHYy2JZ0pCHo4ep1fc/KFyeltmIgwkU5SoU5tqI9Dedt5NxRkLxSKAVh+uxxalGcFO85M9GvehVqw4w4JG9iRW6LiJeEfG+ySzETv/iEuun7Gsctv2kUsFeZBBaiMAZGXxAoV+WXSV6ugiX6Bl1sq4lEgwfE="
+    app: responsys-rest
+    on:
+      repo: TheBookPeople/responsys-rest
+      branch: master
