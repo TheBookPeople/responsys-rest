@@ -30,4 +30,4 @@ deploy:
     app: responsys-rest
     on:
       repo: TheBookPeople/responsys-rest
-      branch: develop
+      branch: master
