@@ -151,7 +151,7 @@ curl -X POST -i -L -H "Content-Type: application/json"  <%= api_v1_search_url %>
  "list" : "z_Notifications_Email_list",
  "folder" : "z_Notifications",
  "query_column" : "EMAIL_ADDRESS",
- "query_data" : "user1@example.com, user2@example.com",
+ "query_data" : ["user1@example.com", "user2@example.com"],
  "result_columns" : "EMAIL_DELIVERABILITY_STATUS_, EMAIL_MD5_HASH_"
 }'
 
