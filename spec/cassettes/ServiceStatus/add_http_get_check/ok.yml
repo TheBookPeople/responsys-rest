@@ -913,5 +913,5 @@ http_interactions:
         location=\"https://ws2.responsys.net/webservices/services/ResponsysWSService\"/>\n
         \       </port>\n    </service>\n</definitions>\n"
     http_version: 
-  recorded_at: Wed, 29 Apr 2015 14:54:15 GMT
+  recorded_at: Tue, 05 May 2015 15:54:42 GMT
 recorded_with: VCR 2.9.3

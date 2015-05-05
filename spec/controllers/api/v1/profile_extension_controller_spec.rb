@@ -16,12 +16,12 @@ describe Api::V1::ProfileExtensionController, type: :controller do
 
       it 'recipient_id' do
         post :create, get_json
-        expect(response_json['result']['recipient_id']).not_to be_nil
+        expect(response_json['result'][0]['recipient_id']).not_to be_nil
       end
 
       it 'error' do
         post :create, get_json
-        expect(response_json['result']['error']).to be_nil
+        expect(response_json['result'][0]['error']).to be_nil
       end
     end
 

@@ -20,7 +20,7 @@ module Api
       end
 
       def data
-        params[:query_data].split(',').map(&:strip)
+        params[:query_data]
       end
 
       def result_columns

@@ -19,7 +19,7 @@ http_interactions:
       string: <?xml version='1.0' encoding='UTF-8'?><soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/"><soapenv:Body><loginResponse
         xmlns="urn:ws.rsys.com"><result><sessionId>DEAR_SESSION_ID</sessionId></result></loginResponse></soapenv:Body></soapenv:Envelope>
     http_version: 
-  recorded_at: Mon, 27 Apr 2015 15:50:35 GMT
+  recorded_at: Tue, 05 May 2015 15:54:33 GMT
 - request:
     method: post
     uri: https://ws2.responsys.net/webservices/services/ResponsysWSService
@@ -38,9 +38,10 @@ http_interactions:
       encoding: UTF-8
       string: <?xml version='1.0' encoding='UTF-8'?><soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/"><soapenv:Body><mergeIntoProfileExtensionResponse
         xmlns="urn:ws.rsys.com"><recipientResult><recipientId>449436402</recipientId><errorMessage
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:nil="1" /></recipientResult><recipientResult><recipientId>449436406</recipientId><errorMessage
         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:nil="1" /></recipientResult></mergeIntoProfileExtensionResponse></soapenv:Body></soapenv:Envelope>
     http_version: 
-  recorded_at: Mon, 27 Apr 2015 15:50:35 GMT
+  recorded_at: Tue, 05 May 2015 15:54:34 GMT
 - request:
     method: post
     uri: https://ws2.responsys.net/webservices/services/ResponsysWSService
@@ -60,5 +61,5 @@ http_interactions:
       string: <?xml version='1.0' encoding='UTF-8'?><soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/"><soapenv:Body><logoutResponse
         xmlns="urn:ws.rsys.com"><result>true</result></logoutResponse></soapenv:Body></soapenv:Envelope>
     http_version: 
-  recorded_at: Mon, 27 Apr 2015 15:50:36 GMT
+  recorded_at: Tue, 05 May 2015 15:54:34 GMT
 recorded_with: VCR 2.9.3

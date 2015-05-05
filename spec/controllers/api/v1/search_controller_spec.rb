@@ -28,7 +28,7 @@ describe Api::V1::SearchController, type: :controller do
     it 'has default result colums' do
       post :create, get_json.except(:result_columns)
       first_result = { 'RIID_' => '449436402',
-                       'CUSTOMER_ID_' => '0001',
+                       'CUSTOMER_ID_' => '1',
                        'EMAIL_ADDRESS_' => 'user1@example.com',
                        'MOBILE_NUMBER_' => nil }
       expect(response_json['data'][0] == first_result).to equal true
@@ -85,7 +85,7 @@ describe Api::V1::SearchController, type: :controller do
       :list => 'z_Notifications_Email_list',
       :folder =>  "z_Notifications",
       :query_column => "EMAIL_ADDRESS",
-      :query_data =>  "user1@example.com, user2@example.com",
+      :query_data =>  ["user1@example.com", "user2@example.com"],
       :result_columns =>  "EMAIL_DELIVERABILITY_STATUS_, EMAIL_MD5_HASH_"
     }
   end
