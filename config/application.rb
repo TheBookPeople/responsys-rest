@@ -29,7 +29,7 @@ module ResponsysRest
     # config.i18n.load_path += Dir[Rails.root.join('my', 'locales', '*.{rb,yml}').to_s]
     # config.i18n.default_locale = :de
     #
-    config.app_version = '0.1.0'
+    config.app_version = '0.1.1'
     config.boot_time = Time.now
     config.action_dispatch.default_headers.merge!('X-TBP-Version' => config.app_version)
     
