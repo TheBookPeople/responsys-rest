@@ -4,7 +4,12 @@ class ApplicationController < ActionController::Base
   protect_from_forgery with: :null_session
 
   rescue_from Exception do |exception|
-    json_request? ? render_error_json(exception.message) : fail(exception)
+	  if json_request? 
+		  render_error_json(exception.message)
+		  logger.error(exception)
+	  else
+	  	  fail(exception)
+	  end
   end
 
   def json(data)
