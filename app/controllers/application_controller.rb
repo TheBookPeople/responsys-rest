@@ -17,7 +17,7 @@ class ApplicationController < ActionController::Base
   end
 
   def validate_param_exists(param)
-    render_error_json("Missing '#{param}' parameter") unless params.key?(param)
+    render_error_json("Missing '#{param}' parameter") unless params[param]
   end
 
   def render_error_json(message)
