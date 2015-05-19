@@ -60,22 +60,26 @@ describe Api::V1::SearchController, type: :controller do
     describe 'missing param' do
       it 'list' do
         post :create, get_json.except(:list)
-        expect(response_json['error']['message']).to eq 'Missing list parameter'
+        expect(response.status).to equal 400
+        expect(response_json['error_message']).to eq "Missing 'list' parameter"
       end
 
       it 'folder' do
         post :create, get_json.except(:folder)
-        expect(response_json['error']['message']).to eq 'Missing folder parameter'
+        expect(response.status).to equal 400
+        expect(response_json['error_message']).to eq "Missing 'folder' parameter"
       end
 
       it 'query_column' do
         post :create, get_json.except(:query_column)
-        expect(response_json['error']['message']).to eq 'Missing query_column parameter'
+        expect(response.status).to equal 400
+        expect(response_json['error_message']).to eq "Missing 'query_column' parameter"
       end
 
       it 'query_data' do
         post :create, get_json.except(:query_data)
-        expect(response_json['error']['message']).to eq 'Missing query_data parameter'
+        expect(response.status).to equal 400
+        expect(response_json['error_message']).to eq "Missing 'query_data' parameter"
       end
     end
   end

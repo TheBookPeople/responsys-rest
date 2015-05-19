@@ -58,46 +58,53 @@ describe Api::V1::ProfileExtensionController, type: :controller do
         data = get_json
         data[:match_column] = 'EMAIL_PERMISSION_REASON'
         post :create, data
-        expect(response_json['error']['message']).to eql 'Invalid value for match_column must one of the following. RIID, CUSTOMER_ID, EMAIL_ADDRESS or MOBILE_NUMBER'
+        expect(response_json['error_message']).to eql 'Invalid value for match_column must one of the following. RIID, CUSTOMER_ID, EMAIL_ADDRESS or MOBILE_NUMBER'
       end
     end
 
     describe 'missing param' do
       it 'profile_extension' do
         post :create, get_json.except(:profile_extension)
-        expect(response_json['error']['message']).to eq 'Missing profile_extension parameter'
+        expect(response.status).to equal 400
+        expect(response_json['error_message']).to eq "Missing 'profile_extension' parameter"
       end
 
       it 'folder' do
         post :create, get_json.except(:folder)
-        expect(response_json['error']['message']).to eq 'Missing folder parameter'
+        expect(response.status).to equal 400
+        expect(response_json['error_message']).to eq "Missing 'folder' parameter"
       end
 
       it 'record_data' do
         post :create, get_json.except(:record_data)
-        expect(response_json['error']['message']).to eq 'Missing record_data parameter'
+        expect(response.status).to equal 400
+        expect(response_json['error_message']).to eq "Missing 'record_data' parameter"
       end
 
       it 'record_data is has one entry' do
         data = get_json
         data[:record_data] = []
         post :create, data
-        expect(response_json['error']['message']).to eq 'Invalid record_data must have at least one record'
+        expect(response.status).to equal 400
+        expect(response_json['error_message']).to eq "Invalid record_data must have at least one record"
       end
 
       it 'match_column' do
         post :create, get_json.except(:match_column)
-        expect(response_json['error']['message']).to eq 'Missing match_column parameter'
+        expect(response.status).to equal 400
+        expect(response_json['error_message']).to eq "Missing 'match_column' parameter"
       end
 
       it 'insert_on_no_match' do
         post :create, get_json.except(:insert_on_no_match)
-        expect(response_json['error']['message']).to eq 'Missing insert_on_no_match parameter'
+        expect(response.status).to equal 400
+        expect(response_json['error_message']).to eq "Missing 'insert_on_no_match' parameter"
       end
 
       it 'update_on_match' do
         post :create, get_json.except(:update_on_match)
-        expect(response_json['error']['message']).to eq 'Missing update_on_match parameter'
+        expect(response.status).to equal 400
+        expect(response_json['error_message']).to eq "Missing 'update_on_match' parameter"
       end
     end
   end

@@ -17,10 +17,11 @@ class ApplicationController < ActionController::Base
   end
 
   def validate_param_exists(param)
-    render_error_json("Missing #{param} parameter") unless params.key?(param)
+    render_error_json("Missing '#{param}' parameter") unless params.key?(param)
   end
 
   def render_error_json(message)
+  	logger.error(message)
     render(status: :bad_request, json: json_error(message))
   end
 
@@ -31,11 +32,9 @@ class ApplicationController < ActionController::Base
   end
 
   def json_error(message)
-    result = { 'status' => 'failure',
-               'error' => {
-                 'message' => message
-               }
-    }
+    result = {
+		'error_message' => message
+	}
     json result
   end
 end
