@@ -32,11 +32,9 @@ class ApplicationController < ActionController::Base
   end
 
   def json_error(message)
-    result = { 'status' => 'failure',
-               'error' => {
-                 'message' => message
-               }
-    }
+    result = {
+		'error_message' => message
+	}
     json result
   end
 end
