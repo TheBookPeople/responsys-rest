@@ -19,7 +19,7 @@ http_interactions:
       string: <?xml version='1.0' encoding='UTF-8'?><soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/"><soapenv:Body><loginResponse
         xmlns="urn:ws.rsys.com"><result><sessionId>DEAR_SESSION_ID</sessionId></result></loginResponse></soapenv:Body></soapenv:Envelope>
     http_version: 
-  recorded_at: Tue, 19 May 2015 16:08:59 GMT
+  recorded_at: Thu, 28 May 2015 10:44:14 GMT
 - request:
     method: post
     uri: https://ws2.responsys.net/webservices/services/ResponsysWSService
@@ -45,7 +45,7 @@ http_interactions:
         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:nil="1" /></result><result><recipientId>-1</recipientId><success>false</success><errorMessage>Recipient
         Not Found</errorMessage></result></triggerCampaignMessageResponse></soapenv:Body></soapenv:Envelope>
     http_version: 
-  recorded_at: Tue, 19 May 2015 16:09:00 GMT
+  recorded_at: Thu, 28 May 2015 10:44:14 GMT
 - request:
     method: post
     uri: https://ws2.responsys.net/webservices/services/ResponsysWSService
@@ -65,5 +65,5 @@ http_interactions:
       string: <?xml version='1.0' encoding='UTF-8'?><soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/"><soapenv:Body><logoutResponse
         xmlns="urn:ws.rsys.com"><result>true</result></logoutResponse></soapenv:Body></soapenv:Envelope>
     http_version: 
-  recorded_at: Tue, 19 May 2015 16:09:01 GMT
+  recorded_at: Thu, 28 May 2015 10:44:15 GMT
 recorded_with: VCR 2.9.3

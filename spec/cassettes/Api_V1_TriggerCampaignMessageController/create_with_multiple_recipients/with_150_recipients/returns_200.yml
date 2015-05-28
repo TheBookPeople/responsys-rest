@@ -19,7 +19,7 @@ http_interactions:
       string: <?xml version='1.0' encoding='UTF-8'?><soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/"><soapenv:Body><loginResponse
         xmlns="urn:ws.rsys.com"><result><sessionId>DEAR_SESSION_ID</sessionId></result></loginResponse></soapenv:Body></soapenv:Envelope>
     http_version: 
-  recorded_at: Tue, 19 May 2015 16:08:50 GMT
+  recorded_at: Thu, 28 May 2015 10:44:04 GMT
 - request:
     method: post
     uri: https://ws2.responsys.net/webservices/services/ResponsysWSService
@@ -43,157 +43,157 @@ http_interactions:
       string: <?xml version='1.0' encoding='UTF-8'?><soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/"><soapenv:Body><triggerCampaignMessageResponse
         xmlns="urn:ws.rsys.com"><result><recipientId>452640586</recipientId><success>true</success><errorMessage
         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:nil="1" /></result><result><recipientId>-1</recipientId><success>false</success><errorMessage>Recipient
-        Not Found</errorMessage></result><result><recipientId>-1</recipientId><success>false</success><errorMessage>Recipient
-        Not Found</errorMessage></result><result><recipientId>-1</recipientId><success>false</success><errorMessage>Recipient
-        Not Found</errorMessage></result><result><recipientId>-1</recipientId><success>false</success><errorMessage>Recipient
-        Not Found</errorMessage></result><result><recipientId>-1</recipientId><success>false</success><errorMessage>Recipient
-        Not Found</errorMessage></result><result><recipientId>-1</recipientId><success>false</success><errorMessage>Recipient
-        Not Found</errorMessage></result><result><recipientId>-1</recipientId><success>false</success><errorMessage>Recipient
-        Not Found</errorMessage></result><result><recipientId>-1</recipientId><success>false</success><errorMessage>Recipient
-        Not Found</errorMessage></result><result><recipientId>-1</recipientId><success>false</success><errorMessage>Recipient
-        Not Found</errorMessage></result><result><recipientId>-1</recipientId><success>false</success><errorMessage>Recipient
-        Not Found</errorMessage></result><result><recipientId>-1</recipientId><success>false</success><errorMessage>Recipient
-        Not Found</errorMessage></result><result><recipientId>-1</recipientId><success>false</success><errorMessage>Recipient
-        Not Found</errorMessage></result><result><recipientId>-1</recipientId><success>false</success><errorMessage>Recipient
-        Not Found</errorMessage></result><result><recipientId>-1</recipientId><success>false</success><errorMessage>Recipient
-        Not Found</errorMessage></result><result><recipientId>-1</recipientId><success>false</success><errorMessage>Recipient
-        Not Found</errorMessage></result><result><recipientId>-1</recipientId><success>false</success><errorMessage>Recipient
-        Not Found</errorMessage></result><result><recipientId>-1</recipientId><success>false</success><errorMessage>Recipient
-        Not Found</errorMessage></result><result><recipientId>-1</recipientId><success>false</success><errorMessage>Recipient
-        Not Found</errorMessage></result><result><recipientId>-1</recipientId><success>false</success><errorMessage>Recipient
-        Not Found</errorMessage></result><result><recipientId>-1</recipientId><success>false</success><errorMessage>Recipient
-        Not Found</errorMessage></result><result><recipientId>-1</recipientId><success>false</success><errorMessage>Recipient
-        Not Found</errorMessage></result><result><recipientId>-1</recipientId><success>false</success><errorMessage>Recipient
-        Not Found</errorMessage></result><result><recipientId>-1</recipientId><success>false</success><errorMessage>Recipient
-        Not Found</errorMessage></result><result><recipientId>-1</recipientId><success>false</success><errorMessage>Recipient
-        Not Found</errorMessage></result><result><recipientId>-1</recipientId><success>false</success><errorMessage>Recipient
-        Not Found</errorMessage></result><result><recipientId>-1</recipientId><success>false</success><errorMessage>Recipient
-        Not Found</errorMessage></result><result><recipientId>-1</recipientId><success>false</success><errorMessage>Recipient
-        Not Found</errorMessage></result><result><recipientId>-1</recipientId><success>false</success><errorMessage>Recipient
-        Not Found</errorMessage></result><result><recipientId>-1</recipientId><success>false</success><errorMessage>Recipient
-        Not Found</errorMessage></result><result><recipientId>-1</recipientId><success>false</success><errorMessage>Recipient
-        Not Found</errorMessage></result><result><recipientId>-1</recipientId><success>false</success><errorMessage>Recipient
-        Not Found</errorMessage></result><result><recipientId>-1</recipientId><success>false</success><errorMessage>Recipient
-        Not Found</errorMessage></result><result><recipientId>-1</recipientId><success>false</success><errorMessage>Recipient
-        Not Found</errorMessage></result><result><recipientId>-1</recipientId><success>false</success><errorMessage>Recipient
-        Not Found</errorMessage></result><result><recipientId>-1</recipientId><success>false</success><errorMessage>Recipient
-        Not Found</errorMessage></result><result><recipientId>-1</recipientId><success>false</success><errorMessage>Recipient
-        Not Found</errorMessage></result><result><recipientId>-1</recipientId><success>false</success><errorMessage>Recipient
-        Not Found</errorMessage></result><result><recipientId>-1</recipientId><success>false</success><errorMessage>Recipient
-        Not Found</errorMessage></result><result><recipientId>-1</recipientId><success>false</success><errorMessage>Recipient
-        Not Found</errorMessage></result><result><recipientId>-1</recipientId><success>false</success><errorMessage>Recipient
-        Not Found</errorMessage></result><result><recipientId>-1</recipientId><success>false</success><errorMessage>Recipient
-        Not Found</errorMessage></result><result><recipientId>-1</recipientId><success>false</success><errorMessage>Recipient
-        Not Found</errorMessage></result><result><recipientId>-1</recipientId><success>false</success><errorMessage>Recipient
-        Not Found</errorMessage></result><result><recipientId>-1</recipientId><success>false</success><errorMessage>Recipient
-        Not Found</errorMessage></result><result><recipientId>-1</recipientId><success>false</success><errorMessage>Recipient
-        Not Found</errorMessage></result><result><recipientId>-1</recipientId><success>false</success><errorMessage>Recipient
-        Not Found</errorMessage></result><result><recipientId>-1</recipientId><success>false</success><errorMessage>Recipient
-        Not Found</errorMessage></result><result><recipientId>-1</recipientId><success>false</success><errorMessage>Recipient
-        Not Found</errorMessage></result><result><recipientId>-1</recipientId><success>false</success><errorMessage>Recipient
-        Not Found</errorMessage></result><result><recipientId>-1</recipientId><success>false</success><errorMessage>Recipient
-        Not Found</errorMessage></result><result><recipientId>-1</recipientId><success>false</success><errorMessage>Recipient
-        Not Found</errorMessage></result><result><recipientId>-1</recipientId><success>false</success><errorMessage>Recipient
-        Not Found</errorMessage></result><result><recipientId>-1</recipientId><success>false</success><errorMessage>Recipient
-        Not Found</errorMessage></result><result><recipientId>-1</recipientId><success>false</success><errorMessage>Recipient
-        Not Found</errorMessage></result><result><recipientId>-1</recipientId><success>false</success><errorMessage>Recipient
-        Not Found</errorMessage></result><result><recipientId>-1</recipientId><success>false</success><errorMessage>Recipient
-        Not Found</errorMessage></result><result><recipientId>-1</recipientId><success>false</success><errorMessage>Recipient
-        Not Found</errorMessage></result><result><recipientId>-1</recipientId><success>false</success><errorMessage>Recipient
-        Not Found</errorMessage></result><result><recipientId>-1</recipientId><success>false</success><errorMessage>Recipient
-        Not Found</errorMessage></result><result><recipientId>-1</recipientId><success>false</success><errorMessage>Recipient
-        Not Found</errorMessage></result><result><recipientId>-1</recipientId><success>false</success><errorMessage>Recipient
-        Not Found</errorMessage></result><result><recipientId>-1</recipientId><success>false</success><errorMessage>Recipient
-        Not Found</errorMessage></result><result><recipientId>-1</recipientId><success>false</success><errorMessage>Recipient
-        Not Found</errorMessage></result><result><recipientId>-1</recipientId><success>false</success><errorMessage>Recipient
-        Not Found</errorMessage></result><result><recipientId>-1</recipientId><success>false</success><errorMessage>Recipient
-        Not Found</errorMessage></result><result><recipientId>-1</recipientId><success>false</success><errorMessage>Recipient
-        Not Found</errorMessage></result><result><recipientId>-1</recipientId><success>false</success><errorMessage>Recipient
-        Not Found</errorMessage></result><result><recipientId>-1</recipientId><success>false</success><errorMessage>Recipient
-        Not Found</errorMessage></result><result><recipientId>-1</recipientId><success>false</success><errorMessage>Recipient
-        Not Found</errorMessage></result><result><recipientId>-1</recipientId><success>false</success><errorMessage>Recipient
-        Not Found</errorMessage></result><result><recipientId>-1</recipientId><success>false</success><errorMessage>Recipient
-        Not Found</errorMessage></result><result><recipientId>-1</recipientId><success>false</success><errorMessage>Recipient
-        Not Found</errorMessage></result><result><recipientId>-1</recipientId><success>false</success><errorMessage>Recipient
-        Not Found</errorMessage></result><result><recipientId>-1</recipientId><success>false</success><errorMessage>Recipient
-        Not Found</errorMessage></result><result><recipientId>-1</recipientId><success>false</success><errorMessage>Recipient
-        Not Found</errorMessage></result><result><recipientId>-1</recipientId><success>false</success><errorMessage>Recipient
-        Not Found</errorMessage></result><result><recipientId>-1</recipientId><success>false</success><errorMessage>Recipient
-        Not Found</errorMessage></result><result><recipientId>-1</recipientId><success>false</success><errorMessage>Recipient
-        Not Found</errorMessage></result><result><recipientId>-1</recipientId><success>false</success><errorMessage>Recipient
-        Not Found</errorMessage></result><result><recipientId>-1</recipientId><success>false</success><errorMessage>Recipient
-        Not Found</errorMessage></result><result><recipientId>-1</recipientId><success>false</success><errorMessage>Recipient
-        Not Found</errorMessage></result><result><recipientId>-1</recipientId><success>false</success><errorMessage>Recipient
-        Not Found</errorMessage></result><result><recipientId>-1</recipientId><success>false</success><errorMessage>Recipient
-        Not Found</errorMessage></result><result><recipientId>-1</recipientId><success>false</success><errorMessage>Recipient
-        Not Found</errorMessage></result><result><recipientId>-1</recipientId><success>false</success><errorMessage>Recipient
-        Not Found</errorMessage></result><result><recipientId>-1</recipientId><success>false</success><errorMessage>Recipient
-        Not Found</errorMessage></result><result><recipientId>-1</recipientId><success>false</success><errorMessage>Recipient
-        Not Found</errorMessage></result><result><recipientId>-1</recipientId><success>false</success><errorMessage>Recipient
-        Not Found</errorMessage></result><result><recipientId>-1</recipientId><success>false</success><errorMessage>Recipient
-        Not Found</errorMessage></result><result><recipientId>-1</recipientId><success>false</success><errorMessage>Recipient
-        Not Found</errorMessage></result><result><recipientId>-1</recipientId><success>false</success><errorMessage>Recipient
-        Not Found</errorMessage></result><result><recipientId>-1</recipientId><success>false</success><errorMessage>Recipient
-        Not Found</errorMessage></result><result><recipientId>-1</recipientId><success>false</success><errorMessage>Recipient
-        Not Found</errorMessage></result><result><recipientId>-1</recipientId><success>false</success><errorMessage>Recipient
-        Not Found</errorMessage></result><result><recipientId>-1</recipientId><success>false</success><errorMessage>Recipient
-        Not Found</errorMessage></result><result><recipientId>-1</recipientId><success>false</success><errorMessage>Recipient
-        Not Found</errorMessage></result><result><recipientId>-1</recipientId><success>false</success><errorMessage>Recipient
-        Not Found</errorMessage></result><result><recipientId>-1</recipientId><success>false</success><errorMessage>Recipient
-        Not Found</errorMessage></result><result><recipientId>-1</recipientId><success>false</success><errorMessage>Recipient
-        Not Found</errorMessage></result><result><recipientId>-1</recipientId><success>false</success><errorMessage>Recipient
-        Not Found</errorMessage></result><result><recipientId>-1</recipientId><success>false</success><errorMessage>Recipient
-        Not Found</errorMessage></result><result><recipientId>-1</recipientId><success>false</success><errorMessage>Recipient
-        Not Found</errorMessage></result><result><recipientId>-1</recipientId><success>false</success><errorMessage>Recipient
-        Not Found</errorMessage></result><result><recipientId>-1</recipientId><success>false</success><errorMessage>Recipient
-        Not Found</errorMessage></result><result><recipientId>-1</recipientId><success>false</success><errorMessage>Recipient
-        Not Found</errorMessage></result><result><recipientId>-1</recipientId><success>false</success><errorMessage>Recipient
-        Not Found</errorMessage></result><result><recipientId>-1</recipientId><success>false</success><errorMessage>Recipient
-        Not Found</errorMessage></result><result><recipientId>-1</recipientId><success>false</success><errorMessage>Recipient
-        Not Found</errorMessage></result><result><recipientId>-1</recipientId><success>false</success><errorMessage>Recipient
-        Not Found</errorMessage></result><result><recipientId>-1</recipientId><success>false</success><errorMessage>Recipient
-        Not Found</errorMessage></result><result><recipientId>-1</recipientId><success>false</success><errorMessage>Recipient
-        Not Found</errorMessage></result><result><recipientId>-1</recipientId><success>false</success><errorMessage>Recipient
-        Not Found</errorMessage></result><result><recipientId>-1</recipientId><success>false</success><errorMessage>Recipient
-        Not Found</errorMessage></result><result><recipientId>-1</recipientId><success>false</success><errorMessage>Recipient
-        Not Found</errorMessage></result><result><recipientId>-1</recipientId><success>false</success><errorMessage>Recipient
-        Not Found</errorMessage></result><result><recipientId>-1</recipientId><success>false</success><errorMessage>Recipient
-        Not Found</errorMessage></result><result><recipientId>-1</recipientId><success>false</success><errorMessage>Recipient
-        Not Found</errorMessage></result><result><recipientId>-1</recipientId><success>false</success><errorMessage>Recipient
-        Not Found</errorMessage></result><result><recipientId>-1</recipientId><success>false</success><errorMessage>Recipient
-        Not Found</errorMessage></result><result><recipientId>-1</recipientId><success>false</success><errorMessage>Recipient
-        Not Found</errorMessage></result><result><recipientId>-1</recipientId><success>false</success><errorMessage>Recipient
-        Not Found</errorMessage></result><result><recipientId>-1</recipientId><success>false</success><errorMessage>Recipient
-        Not Found</errorMessage></result><result><recipientId>-1</recipientId><success>false</success><errorMessage>Recipient
-        Not Found</errorMessage></result><result><recipientId>-1</recipientId><success>false</success><errorMessage>Recipient
-        Not Found</errorMessage></result><result><recipientId>-1</recipientId><success>false</success><errorMessage>Recipient
-        Not Found</errorMessage></result><result><recipientId>-1</recipientId><success>false</success><errorMessage>Recipient
-        Not Found</errorMessage></result><result><recipientId>-1</recipientId><success>false</success><errorMessage>Recipient
-        Not Found</errorMessage></result><result><recipientId>-1</recipientId><success>false</success><errorMessage>Recipient
-        Not Found</errorMessage></result><result><recipientId>-1</recipientId><success>false</success><errorMessage>Recipient
-        Not Found</errorMessage></result><result><recipientId>-1</recipientId><success>false</success><errorMessage>Recipient
-        Not Found</errorMessage></result><result><recipientId>-1</recipientId><success>false</success><errorMessage>Recipient
-        Not Found</errorMessage></result><result><recipientId>-1</recipientId><success>false</success><errorMessage>Recipient
-        Not Found</errorMessage></result><result><recipientId>-1</recipientId><success>false</success><errorMessage>Recipient
-        Not Found</errorMessage></result><result><recipientId>-1</recipientId><success>false</success><errorMessage>Recipient
-        Not Found</errorMessage></result><result><recipientId>-1</recipientId><success>false</success><errorMessage>Recipient
-        Not Found</errorMessage></result><result><recipientId>-1</recipientId><success>false</success><errorMessage>Recipient
-        Not Found</errorMessage></result><result><recipientId>-1</recipientId><success>false</success><errorMessage>Recipient
-        Not Found</errorMessage></result><result><recipientId>-1</recipientId><success>false</success><errorMessage>Recipient
-        Not Found</errorMessage></result><result><recipientId>-1</recipientId><success>false</success><errorMessage>Recipient
-        Not Found</errorMessage></result><result><recipientId>-1</recipientId><success>false</success><errorMessage>Recipient
-        Not Found</errorMessage></result><result><recipientId>-1</recipientId><success>false</success><errorMessage>Recipient
-        Not Found</errorMessage></result><result><recipientId>-1</recipientId><success>false</success><errorMessage>Recipient
-        Not Found</errorMessage></result><result><recipientId>-1</recipientId><success>false</success><errorMessage>Recipient
-        Not Found</errorMessage></result><result><recipientId>-1</recipientId><success>false</success><errorMessage>Recipient
-        Not Found</errorMessage></result><result><recipientId>-1</recipientId><success>false</success><errorMessage>Recipient
-        Not Found</errorMessage></result><result><recipientId>-1</recipientId><success>false</success><errorMessage>Recipient
-        Not Found</errorMessage></result><result><recipientId>-1</recipientId><success>false</success><errorMessage>Recipient
-        Not Found</errorMessage></result><result><recipientId>-1</recipientId><success>false</success><errorMessage>Recipient
-        Not Found</errorMessage></result><result><recipientId>-1</recipientId><success>false</success><errorMessage>Recipient
-        Not Found</errorMessage></result></triggerCampaignMessageResponse></soapenv:Body></soapenv:Envelope>
+        Not Found</errorMessage></result><result><recipientId>453840450</recipientId><success>true</success><errorMessage
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:nil="1" /></result><result><recipientId>453840451</recipientId><success>true</success><errorMessage
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:nil="1" /></result><result><recipientId>453840452</recipientId><success>true</success><errorMessage
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:nil="1" /></result><result><recipientId>453840453</recipientId><success>true</success><errorMessage
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:nil="1" /></result><result><recipientId>453840454</recipientId><success>true</success><errorMessage
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:nil="1" /></result><result><recipientId>453840455</recipientId><success>true</success><errorMessage
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:nil="1" /></result><result><recipientId>453840456</recipientId><success>true</success><errorMessage
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:nil="1" /></result><result><recipientId>453840457</recipientId><success>true</success><errorMessage
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:nil="1" /></result><result><recipientId>453840458</recipientId><success>true</success><errorMessage
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:nil="1" /></result><result><recipientId>453840459</recipientId><success>true</success><errorMessage
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:nil="1" /></result><result><recipientId>453840460</recipientId><success>true</success><errorMessage
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:nil="1" /></result><result><recipientId>453840461</recipientId><success>true</success><errorMessage
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:nil="1" /></result><result><recipientId>453840462</recipientId><success>true</success><errorMessage
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:nil="1" /></result><result><recipientId>453840463</recipientId><success>true</success><errorMessage
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:nil="1" /></result><result><recipientId>453840464</recipientId><success>true</success><errorMessage
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:nil="1" /></result><result><recipientId>453840465</recipientId><success>true</success><errorMessage
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:nil="1" /></result><result><recipientId>453840466</recipientId><success>true</success><errorMessage
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:nil="1" /></result><result><recipientId>453840467</recipientId><success>true</success><errorMessage
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:nil="1" /></result><result><recipientId>453840468</recipientId><success>true</success><errorMessage
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:nil="1" /></result><result><recipientId>453840469</recipientId><success>true</success><errorMessage
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:nil="1" /></result><result><recipientId>453840470</recipientId><success>true</success><errorMessage
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:nil="1" /></result><result><recipientId>453840471</recipientId><success>true</success><errorMessage
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:nil="1" /></result><result><recipientId>453840472</recipientId><success>true</success><errorMessage
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:nil="1" /></result><result><recipientId>453840473</recipientId><success>true</success><errorMessage
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:nil="1" /></result><result><recipientId>453840474</recipientId><success>true</success><errorMessage
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:nil="1" /></result><result><recipientId>453840475</recipientId><success>true</success><errorMessage
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:nil="1" /></result><result><recipientId>453840476</recipientId><success>true</success><errorMessage
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:nil="1" /></result><result><recipientId>453840477</recipientId><success>true</success><errorMessage
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:nil="1" /></result><result><recipientId>453840478</recipientId><success>true</success><errorMessage
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:nil="1" /></result><result><recipientId>453840479</recipientId><success>true</success><errorMessage
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:nil="1" /></result><result><recipientId>453840480</recipientId><success>true</success><errorMessage
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:nil="1" /></result><result><recipientId>453840481</recipientId><success>true</success><errorMessage
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:nil="1" /></result><result><recipientId>453840482</recipientId><success>true</success><errorMessage
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:nil="1" /></result><result><recipientId>453840483</recipientId><success>true</success><errorMessage
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:nil="1" /></result><result><recipientId>453840484</recipientId><success>true</success><errorMessage
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:nil="1" /></result><result><recipientId>453840485</recipientId><success>true</success><errorMessage
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:nil="1" /></result><result><recipientId>453840486</recipientId><success>true</success><errorMessage
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:nil="1" /></result><result><recipientId>453840487</recipientId><success>true</success><errorMessage
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:nil="1" /></result><result><recipientId>453840488</recipientId><success>true</success><errorMessage
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:nil="1" /></result><result><recipientId>453840489</recipientId><success>true</success><errorMessage
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:nil="1" /></result><result><recipientId>453840490</recipientId><success>true</success><errorMessage
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:nil="1" /></result><result><recipientId>453840491</recipientId><success>true</success><errorMessage
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:nil="1" /></result><result><recipientId>453840492</recipientId><success>true</success><errorMessage
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:nil="1" /></result><result><recipientId>453840493</recipientId><success>true</success><errorMessage
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:nil="1" /></result><result><recipientId>453840494</recipientId><success>true</success><errorMessage
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:nil="1" /></result><result><recipientId>453840495</recipientId><success>true</success><errorMessage
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:nil="1" /></result><result><recipientId>453840496</recipientId><success>true</success><errorMessage
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:nil="1" /></result><result><recipientId>453840497</recipientId><success>true</success><errorMessage
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:nil="1" /></result><result><recipientId>453840498</recipientId><success>true</success><errorMessage
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:nil="1" /></result><result><recipientId>453840499</recipientId><success>true</success><errorMessage
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:nil="1" /></result><result><recipientId>453840500</recipientId><success>true</success><errorMessage
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:nil="1" /></result><result><recipientId>453840501</recipientId><success>true</success><errorMessage
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:nil="1" /></result><result><recipientId>453840502</recipientId><success>true</success><errorMessage
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:nil="1" /></result><result><recipientId>453840503</recipientId><success>true</success><errorMessage
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:nil="1" /></result><result><recipientId>453840504</recipientId><success>true</success><errorMessage
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:nil="1" /></result><result><recipientId>453840505</recipientId><success>true</success><errorMessage
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:nil="1" /></result><result><recipientId>453840506</recipientId><success>true</success><errorMessage
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:nil="1" /></result><result><recipientId>453840507</recipientId><success>true</success><errorMessage
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:nil="1" /></result><result><recipientId>453840508</recipientId><success>true</success><errorMessage
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:nil="1" /></result><result><recipientId>453840509</recipientId><success>true</success><errorMessage
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:nil="1" /></result><result><recipientId>453840510</recipientId><success>true</success><errorMessage
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:nil="1" /></result><result><recipientId>453840511</recipientId><success>true</success><errorMessage
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:nil="1" /></result><result><recipientId>453840512</recipientId><success>true</success><errorMessage
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:nil="1" /></result><result><recipientId>453840513</recipientId><success>true</success><errorMessage
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:nil="1" /></result><result><recipientId>453840514</recipientId><success>true</success><errorMessage
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:nil="1" /></result><result><recipientId>453840515</recipientId><success>true</success><errorMessage
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:nil="1" /></result><result><recipientId>453840516</recipientId><success>true</success><errorMessage
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:nil="1" /></result><result><recipientId>453840517</recipientId><success>true</success><errorMessage
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:nil="1" /></result><result><recipientId>453840518</recipientId><success>true</success><errorMessage
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:nil="1" /></result><result><recipientId>453840519</recipientId><success>true</success><errorMessage
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:nil="1" /></result><result><recipientId>453840520</recipientId><success>true</success><errorMessage
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:nil="1" /></result><result><recipientId>453840521</recipientId><success>true</success><errorMessage
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:nil="1" /></result><result><recipientId>453840522</recipientId><success>true</success><errorMessage
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:nil="1" /></result><result><recipientId>453840523</recipientId><success>true</success><errorMessage
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:nil="1" /></result><result><recipientId>453840524</recipientId><success>true</success><errorMessage
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:nil="1" /></result><result><recipientId>453840525</recipientId><success>true</success><errorMessage
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:nil="1" /></result><result><recipientId>453840526</recipientId><success>true</success><errorMessage
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:nil="1" /></result><result><recipientId>453840527</recipientId><success>true</success><errorMessage
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:nil="1" /></result><result><recipientId>453840528</recipientId><success>true</success><errorMessage
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:nil="1" /></result><result><recipientId>453840529</recipientId><success>true</success><errorMessage
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:nil="1" /></result><result><recipientId>453840530</recipientId><success>true</success><errorMessage
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:nil="1" /></result><result><recipientId>453840531</recipientId><success>true</success><errorMessage
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:nil="1" /></result><result><recipientId>453840532</recipientId><success>true</success><errorMessage
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:nil="1" /></result><result><recipientId>453840533</recipientId><success>true</success><errorMessage
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:nil="1" /></result><result><recipientId>453840534</recipientId><success>true</success><errorMessage
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:nil="1" /></result><result><recipientId>453840535</recipientId><success>true</success><errorMessage
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:nil="1" /></result><result><recipientId>453840536</recipientId><success>true</success><errorMessage
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:nil="1" /></result><result><recipientId>453840537</recipientId><success>true</success><errorMessage
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:nil="1" /></result><result><recipientId>453840538</recipientId><success>true</success><errorMessage
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:nil="1" /></result><result><recipientId>453840539</recipientId><success>true</success><errorMessage
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:nil="1" /></result><result><recipientId>453840540</recipientId><success>true</success><errorMessage
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:nil="1" /></result><result><recipientId>453840541</recipientId><success>true</success><errorMessage
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:nil="1" /></result><result><recipientId>453840542</recipientId><success>true</success><errorMessage
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:nil="1" /></result><result><recipientId>453840543</recipientId><success>true</success><errorMessage
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:nil="1" /></result><result><recipientId>453840544</recipientId><success>true</success><errorMessage
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:nil="1" /></result><result><recipientId>453840545</recipientId><success>true</success><errorMessage
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:nil="1" /></result><result><recipientId>453840546</recipientId><success>true</success><errorMessage
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:nil="1" /></result><result><recipientId>453840547</recipientId><success>true</success><errorMessage
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:nil="1" /></result><result><recipientId>453840548</recipientId><success>true</success><errorMessage
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:nil="1" /></result><result><recipientId>453840549</recipientId><success>true</success><errorMessage
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:nil="1" /></result><result><recipientId>453840550</recipientId><success>true</success><errorMessage
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:nil="1" /></result><result><recipientId>453840551</recipientId><success>true</success><errorMessage
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:nil="1" /></result><result><recipientId>453840552</recipientId><success>true</success><errorMessage
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:nil="1" /></result><result><recipientId>453840553</recipientId><success>true</success><errorMessage
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:nil="1" /></result><result><recipientId>453840554</recipientId><success>true</success><errorMessage
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:nil="1" /></result><result><recipientId>453840555</recipientId><success>true</success><errorMessage
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:nil="1" /></result><result><recipientId>453840556</recipientId><success>true</success><errorMessage
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:nil="1" /></result><result><recipientId>453840557</recipientId><success>true</success><errorMessage
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:nil="1" /></result><result><recipientId>453840558</recipientId><success>true</success><errorMessage
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:nil="1" /></result><result><recipientId>453840559</recipientId><success>true</success><errorMessage
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:nil="1" /></result><result><recipientId>453840560</recipientId><success>true</success><errorMessage
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:nil="1" /></result><result><recipientId>453840561</recipientId><success>true</success><errorMessage
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:nil="1" /></result><result><recipientId>453840562</recipientId><success>true</success><errorMessage
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:nil="1" /></result><result><recipientId>453840563</recipientId><success>true</success><errorMessage
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:nil="1" /></result><result><recipientId>453840564</recipientId><success>true</success><errorMessage
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:nil="1" /></result><result><recipientId>453840565</recipientId><success>true</success><errorMessage
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:nil="1" /></result><result><recipientId>453840566</recipientId><success>true</success><errorMessage
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:nil="1" /></result><result><recipientId>453840567</recipientId><success>true</success><errorMessage
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:nil="1" /></result><result><recipientId>453840568</recipientId><success>true</success><errorMessage
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:nil="1" /></result><result><recipientId>453840569</recipientId><success>true</success><errorMessage
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:nil="1" /></result><result><recipientId>453840570</recipientId><success>true</success><errorMessage
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:nil="1" /></result><result><recipientId>453840571</recipientId><success>true</success><errorMessage
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:nil="1" /></result><result><recipientId>453840572</recipientId><success>true</success><errorMessage
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:nil="1" /></result><result><recipientId>453840573</recipientId><success>true</success><errorMessage
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:nil="1" /></result><result><recipientId>453840574</recipientId><success>true</success><errorMessage
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:nil="1" /></result><result><recipientId>453840575</recipientId><success>true</success><errorMessage
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:nil="1" /></result><result><recipientId>453840576</recipientId><success>true</success><errorMessage
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:nil="1" /></result><result><recipientId>453840577</recipientId><success>true</success><errorMessage
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:nil="1" /></result><result><recipientId>453840578</recipientId><success>true</success><errorMessage
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:nil="1" /></result><result><recipientId>453840579</recipientId><success>true</success><errorMessage
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:nil="1" /></result><result><recipientId>453840580</recipientId><success>true</success><errorMessage
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:nil="1" /></result><result><recipientId>453840581</recipientId><success>true</success><errorMessage
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:nil="1" /></result><result><recipientId>453840582</recipientId><success>true</success><errorMessage
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:nil="1" /></result><result><recipientId>453840583</recipientId><success>true</success><errorMessage
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:nil="1" /></result><result><recipientId>453840584</recipientId><success>true</success><errorMessage
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:nil="1" /></result><result><recipientId>453840585</recipientId><success>true</success><errorMessage
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:nil="1" /></result><result><recipientId>453840586</recipientId><success>true</success><errorMessage
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:nil="1" /></result><result><recipientId>453840587</recipientId><success>true</success><errorMessage
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:nil="1" /></result><result><recipientId>453840588</recipientId><success>true</success><errorMessage
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:nil="1" /></result><result><recipientId>453840589</recipientId><success>true</success><errorMessage
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:nil="1" /></result><result><recipientId>453840590</recipientId><success>true</success><errorMessage
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:nil="1" /></result><result><recipientId>453840591</recipientId><success>true</success><errorMessage
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:nil="1" /></result><result><recipientId>453840592</recipientId><success>true</success><errorMessage
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:nil="1" /></result><result><recipientId>453840593</recipientId><success>true</success><errorMessage
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:nil="1" /></result><result><recipientId>453840594</recipientId><success>true</success><errorMessage
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:nil="1" /></result><result><recipientId>453840595</recipientId><success>true</success><errorMessage
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:nil="1" /></result><result><recipientId>453840596</recipientId><success>true</success><errorMessage
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:nil="1" /></result><result><recipientId>453840597</recipientId><success>true</success><errorMessage
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:nil="1" /></result></triggerCampaignMessageResponse></soapenv:Body></soapenv:Envelope>
     http_version: 
-  recorded_at: Tue, 19 May 2015 16:08:53 GMT
+  recorded_at: Thu, 28 May 2015 10:44:06 GMT
 - request:
     method: post
     uri: https://ws2.responsys.net/webservices/services/ResponsysWSService
@@ -213,5 +213,5 @@ http_interactions:
       string: <?xml version='1.0' encoding='UTF-8'?><soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/"><soapenv:Body><logoutResponse
         xmlns="urn:ws.rsys.com"><result>true</result></logoutResponse></soapenv:Body></soapenv:Envelope>
     http_version: 
-  recorded_at: Tue, 19 May 2015 16:08:54 GMT
+  recorded_at: Thu, 28 May 2015 10:44:07 GMT
 recorded_with: VCR 2.9.3

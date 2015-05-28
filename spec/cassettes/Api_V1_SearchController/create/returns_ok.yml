@@ -19,7 +19,7 @@ http_interactions:
       string: <?xml version='1.0' encoding='UTF-8'?><soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/"><soapenv:Body><loginResponse
         xmlns="urn:ws.rsys.com"><result><sessionId>DEAR_SESSION_ID</sessionId></result></loginResponse></soapenv:Body></soapenv:Envelope>
     http_version: 
-  recorded_at: Tue, 05 May 2015 15:53:14 GMT
+  recorded_at: Thu, 28 May 2015 10:17:37 GMT
 - request:
     method: post
     uri: https://ws2.responsys.net/webservices/services/ResponsysWSService
@@ -39,7 +39,7 @@ http_interactions:
       string: <?xml version='1.0' encoding='UTF-8'?><soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/"><soapenv:Body><retrieveListMembersResponse
         xmlns="urn:ws.rsys.com"><result><recordData><fieldNames>EMAIL_DELIVERABILITY_STATUS_</fieldNames><fieldNames>EMAIL_MD5_HASH_</fieldNames><records><fieldValues>D</fieldValues><fieldValues>111d68d06e2d317b5a59c2c6c5bad808</fieldValues></records><records><fieldValues>D</fieldValues><fieldValues>111d68d06e2d317b5a59c2c6c5bad808</fieldValues></records><records><fieldValues>D</fieldValues><fieldValues>ab53a2911ddf9b4817ac01ddcd3d975f</fieldValues></records></recordData></result></retrieveListMembersResponse></soapenv:Body></soapenv:Envelope>
     http_version: 
-  recorded_at: Tue, 05 May 2015 15:53:15 GMT
+  recorded_at: Thu, 28 May 2015 10:17:38 GMT
 - request:
     method: post
     uri: https://ws2.responsys.net/webservices/services/ResponsysWSService
@@ -59,5 +59,5 @@ http_interactions:
       string: <?xml version='1.0' encoding='UTF-8'?><soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/"><soapenv:Body><logoutResponse
         xmlns="urn:ws.rsys.com"><result>true</result></logoutResponse></soapenv:Body></soapenv:Envelope>
     http_version: 
-  recorded_at: Tue, 05 May 2015 15:53:15 GMT
+  recorded_at: Thu, 28 May 2015 10:17:38 GMT
 recorded_with: VCR 2.9.3

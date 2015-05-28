@@ -2,11 +2,47 @@ require 'rails_helper'
 require 'pp'
 
 describe Api::V1::TriggerCampaignMessageController, type: :controller do
-  describe 'create', :vcr do
+
+  describe 'create with single recipient', :vcr do
+    it 'returns 200' do
+      data = get_json
+      data[:recipients].pop
+      post :create, data
+      pp response_json
+      expect(response.status).to eq 200
+    end
+    it 'returns a single result' do
+      data = get_json
+      data[:recipients].pop
+      post :create, data
+      pp response_json
+      expect(response_json.size).to eq 1
+	end
+  end
+  describe 'create with multiple recipients', :vcr do
     it 'returns 200' do
       post :create, get_json
       expect(response.status).to eq 200
     end
+
+	it 'handles non-ok status' do
+	  @client = instance_double("Responsys::Api::Client")
+	  expect(Responsys::Api::Client).to receive(:new) { @client }
+	  expect(@client).to receive(:trigger_message) do
+        {
+		  :status => 'not ok',
+		  :error => {
+		  	  :code => 'ERR99',
+		  	  :message => 'Mocked Failure'
+		  }
+	    }
+	  end
+      post :create, get_json
+      pp response_json
+      expect(response_json['error_code']).to eq 'ERR99'
+      expect(response_json['error_message']).to eq 'Mocked Failure'
+      expect(response.status).to eq 500
+	end
 
     it 'returns ok' do
       post :create, get_json
@@ -42,7 +78,7 @@ describe Api::V1::TriggerCampaignMessageController, type: :controller do
 			data = get_json
 			(2..150).each { |i| data[:recipients] << {email:"foo-#{i}@test.thebookpeople.com"}}
 			post :create, data
-			expect(response_json['error_message']).to eq 'Maxium of 150 recipients'
+			expect(response_json['error_message']).to eq 'Maximum of 150 recipients'
 		end
 	end
 
@@ -98,7 +134,7 @@ describe Api::V1::TriggerCampaignMessageController, type: :controller do
       end
     end
   end
-
+  
   def get_json
     {
       :folder =>  "z_Stock_Alerts",#'TBP_Prog_Stock_Alert',#
