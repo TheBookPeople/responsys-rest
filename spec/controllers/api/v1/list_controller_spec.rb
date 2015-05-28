@@ -1,5 +1,4 @@
 require 'rails_helper'
-require 'pp'
 
 describe Api::V1::ListController, type: :controller do
   describe 'adding to list', :vcr do
@@ -9,7 +8,6 @@ describe Api::V1::ListController, type: :controller do
     end
     it 'returns total_count of 2' do
       post :create, get_json
-      pp response_json
       expect(response_json['total_count']).to eq '2'
     end
 
@@ -18,19 +16,16 @@ describe Api::V1::ListController, type: :controller do
 	  expect(Responsys::Api::Client).to receive(:new) { @client }
 	  expect(@client).to receive(:merge_list_members) { {:status => 'not ok'} }
       post :create, get_json
-      pp response_json
       expect(response_json['status']).to eq 'not ok'
 	end
 
     it 'returns error_message of nil' do
       post :create, get_json
-      pp response_json
       expect(response_json['error_message']).to eq nil
     end
 
     it 'returns rejected_count of 0' do
       post :create, get_json
-      pp response_json
       expect(response_json['rejected_count']).to eq '0'
       expect(response_json['error_message']).to eq nil
     end
@@ -63,7 +58,6 @@ describe Api::V1::ListController, type: :controller do
 			end	
 			expect(data[:record_data].size).to eq 151
 			post :create, data
-			pp response_json
 			expect(response.status).to eq 400
 		end
 		it 'sets error_message' do
