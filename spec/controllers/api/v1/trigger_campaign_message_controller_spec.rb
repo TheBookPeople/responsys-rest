@@ -1,5 +1,4 @@
 require 'rails_helper'
-require 'pp'
 
 describe Api::V1::TriggerCampaignMessageController, type: :controller do
 
@@ -8,14 +7,12 @@ describe Api::V1::TriggerCampaignMessageController, type: :controller do
       data = get_json
       data[:recipients].pop
       post :create, data
-      pp response_json
       expect(response.status).to eq 200
     end
     it 'returns a single result' do
       data = get_json
       data[:recipients].pop
       post :create, data
-      pp response_json
       expect(response_json.size).to eq 1
 	end
   end
@@ -38,7 +35,6 @@ describe Api::V1::TriggerCampaignMessageController, type: :controller do
 	    }
 	  end
       post :create, get_json
-      pp response_json
       expect(response_json['error_code']).to eq 'ERR99'
       expect(response_json['error_message']).to eq 'Mocked Failure'
       expect(response.status).to eq 500

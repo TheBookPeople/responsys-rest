@@ -353,7 +353,7 @@ Transfer-Encoding: chunked
 <p>Trigger Campaign Message (send transactional email)</p>
 <h3>URL Structure</h3>
 <pre>
-POSt <%= api_v1_trigger_campaign_message_url %>
+POST <%= api_v1_trigger_campaign_message_url %>
 </pre>
 
 
@@ -361,7 +361,7 @@ POSt <%= api_v1_trigger_campaign_message_url %>
 
 <pre class="terminal">
 <code class="language-bash">
-curl -i -L <%= api_v1_trigger_campaign_message_url %>\?pretty\=true -d '
+curl -X POST -i -L -H "Content-Type: application/json" <%= api_v1_trigger_campaign_message_url %>\?pretty\=true -d '
 {
 	"list" : "Empty_Stock_Alerts_List",
 	"folder" : "TBP_Prog_Stock_Alert",
@@ -407,5 +407,59 @@ Transfer-Encoding: chunked
 ]
 </code>
 </pre>
+
+<h2><a name="merge_list_members">MergeListMembers</a></h2>
+
+<p>Merge List Members (add addresses to a list)</p>
+<h3>URL Structure</h3>
+<pre>
+POST <%= api_v1_merge_list_members_url %>
+</pre>
+
+<h3>Example</h3>
+
+<pre class="terminal">
+<code class="language-bash">
+curl -XPOST -i -L -H "Content-Type: application/json" <%= api_v1_merge_list_members_url %>\?pretty\=true -d '
+{
+	"list" : "Empty_Stock_Alerts_List",
+	"folder" : "TBP_Prog_Stock_Alert",
+	"record_data": [
+		{
+			"EMAIL_ADDRESS_": "test@thebookpeople.co.uk",
+			"CUSTOMER_ID_": "9876543"
+		},
+		{
+			"EMAIL_ADDRESS_": "test2@thebookpeople.co.uk",
+			"CUSTOMER_ID_": "123456789"
+		}		
+	]
+}
+'
+</code>
+<code class="language-http">
+HTTP/1.1 200 OK
+X-Frame-Options: SAMEORIGIN
+X-XSS-Protection: 1; mode=block
+X-Content-Type-Options: nosniff
+X-TBP-Version: 0.2.0
+Content-Type: application/json; charset=utf-8
+ETag: W/"8a76c27403cd87beb90698c4841a4e1a"
+Cache-Control: max-age=0, private, must-revalidate
+X-Request-Id: 7dbd404a-85a3-489a-9ea3-d8d14fb04878
+X-Runtime: 2.163590
+Transfer-Encoding: chunked
+</code>
+<code class="language-javascript">
+{
+	"insert_count": "0",
+	"update_count": "2",
+	"rejected_count": "0",
+	"total_count": "2",
+	"error_message": null
+}
+</code>
+</pre>
+
 
 </section>
