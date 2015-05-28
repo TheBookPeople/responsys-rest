@@ -15,7 +15,7 @@ describe ApplicationController do
       @request.env["CONTENT_TYPE"] = "application/json"
       get :index, format: :json
 
-      expect(response.body).to eql "{\"status\":\"failure\",\"error\":{\"message\":\"Boom!\"}}"
+      expect(response.body).to eql "{\"error_message\":\"Boom!\"}"
     end
 
     it 'html' do

@@ -347,4 +347,119 @@ Transfer-Encoding: chunked
 </pre>
 
 
+
+<h2><a name="trigger_campaign_message">TriggerCampaignMessage</a></h2>
+
+<p>Trigger Campaign Message (send transactional email)</p>
+<h3>URL Structure</h3>
+<pre>
+POST <%= api_v1_trigger_campaign_message_url %>
+</pre>
+
+
+  <h3>Example</h3>
+
+<pre class="terminal">
+<code class="language-bash">
+curl -X POST -i -L -H "Content-Type: application/json" <%= api_v1_trigger_campaign_message_url %>\?pretty\=true -d '
+{
+	"list" : "Empty_Stock_Alerts_List",
+	"folder" : "TBP_Prog_Stock_Alert",
+	"campaign": "Stock_Alerts_Campaign",
+	"recipients": [
+		{
+			"email": "luke.farrar@thebookpeople.co.uk",
+			"optional_data" : {
+				"PRODUCT_TITLE": "title",
+				"AUTHOR": "author",
+				"PRICE": "123.45",
+				"FIRST_NAME": "Bob",
+				"PRODUCT_PAGE_URL": "moo.com",
+				"SAVING": "99.99",
+				"PRODUCT_IMAGE_URL": "moo.com/logo.png"
+			}
+		}
+	]
+}
+'
+</code>
+<code class="language-http">
+HTTP/1.1 200 OK
+X-Frame-Options: SAMEORIGIN
+X-XSS-Protection: 1; mode=block
+X-Content-Type-Options: nosniff
+X-TBP-Version: 0.1.1
+Content-Type: application/json; charset=utf-8
+ETag: W/"814c7637376a5f718c89c49046b5e5f8"
+Cache-Control: max-age=0, private, must-revalidate
+X-Request-Id: f22766ca-39de-4bc6-9668-58fea65f3778
+X-Runtime: 3.172549
+Transfer-Encoding: chunked
+</code>
+<code class="language-javascript">
+
+[
+	{
+		"recipient_id": "452639455",
+		"success": true,
+		"error_message": null
+	}
+]
+</code>
+</pre>
+
+<h2><a name="merge_list_members">MergeListMembers</a></h2>
+
+<p>Merge List Members (add addresses to a list)</p>
+<h3>URL Structure</h3>
+<pre>
+POST <%= api_v1_merge_list_members_url %>
+</pre>
+
+<h3>Example</h3>
+
+<pre class="terminal">
+<code class="language-bash">
+curl -XPOST -i -L -H "Content-Type: application/json" <%= api_v1_merge_list_members_url %>\?pretty\=true -d '
+{
+	"list" : "Empty_Stock_Alerts_List",
+	"folder" : "TBP_Prog_Stock_Alert",
+	"record_data": [
+		{
+			"EMAIL_ADDRESS_": "test@thebookpeople.co.uk",
+			"CUSTOMER_ID_": "9876543"
+		},
+		{
+			"EMAIL_ADDRESS_": "test2@thebookpeople.co.uk",
+			"CUSTOMER_ID_": "123456789"
+		}		
+	]
+}
+'
+</code>
+<code class="language-http">
+HTTP/1.1 200 OK
+X-Frame-Options: SAMEORIGIN
+X-XSS-Protection: 1; mode=block
+X-Content-Type-Options: nosniff
+X-TBP-Version: 0.2.0
+Content-Type: application/json; charset=utf-8
+ETag: W/"8a76c27403cd87beb90698c4841a4e1a"
+Cache-Control: max-age=0, private, must-revalidate
+X-Request-Id: 7dbd404a-85a3-489a-9ea3-d8d14fb04878
+X-Runtime: 2.163590
+Transfer-Encoding: chunked
+</code>
+<code class="language-javascript">
+{
+	"insert_count": "0",
+	"update_count": "2",
+	"rejected_count": "0",
+	"total_count": "2",
+	"error_message": null
+}
+</code>
+</pre>
+
+
 </section>

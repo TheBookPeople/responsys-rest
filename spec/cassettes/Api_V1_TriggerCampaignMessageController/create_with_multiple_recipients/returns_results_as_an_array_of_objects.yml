@@ -1,0 +1,69 @@
+---
+http_interactions:
+- request:
+    method: post
+    uri: https://ws2.responsys.net/webservices/services/ResponsysWSService
+    body:
+      encoding: UTF-8
+      string: <?xml version="1.0" encoding="UTF-8"?><env:Envelope xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:tns="urn:ws.rsys.com"
+        xmlns:env="http://schemas.xmlsoap.org/soap/envelope/"><env:Body><tns:login><tns:username>your_responsys_username</tns:username><tns:password>your_responsys_password</tns:password></tns:login></env:Body></env:Envelope>
+    headers: 
+  response:
+    status:
+      code: 200
+      message: OK
+    headers: 
+    body:
+      encoding: UTF-8
+      string: <?xml version='1.0' encoding='UTF-8'?><soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/"><soapenv:Body><loginResponse
+        xmlns="urn:ws.rsys.com"><result><sessionId>DEAR_SESSION_ID</sessionId></result></loginResponse></soapenv:Body></soapenv:Envelope>
+    http_version: 
+  recorded_at: Thu, 28 May 2015 10:44:02 GMT
+- request:
+    method: post
+    uri: https://ws2.responsys.net/webservices/services/ResponsysWSService
+    body:
+      encoding: UTF-8
+      string: <?xml version="1.0" encoding="UTF-8"?><env:Envelope xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:tns="urn:ws.rsys.com"
+        xmlns:env="http://schemas.xmlsoap.org/soap/envelope/"><env:Header><sessionHeader><sessionId>DEAR_SESSION_ID</sessionId></sessionHeader></env:Header><env:Body><tns:triggerCampaignMessage><tns:campaign><tns:folderName>z_Stock_Alerts</tns:folderName><tns:objectName>z_TBP_Stock_Alerts</tns:objectName></tns:campaign><tns:recipientData><tns:recipient><tns:listName><tns:folderName>z_Stock_Alerts</tns:folderName><tns:objectName>z_Stock_Alerts_Test_List</tns:objectName></tns:listName><tns:recipientId>0</tns:recipientId><tns:customerId></tns:customerId><tns:emailAddress>luke.farrar@thebookpeople.co.uk</tns:emailAddress><tns:mobileNumber></tns:mobileNumber><tns:emailFormat>NO_FORMAT</tns:emailFormat></tns:recipient><tns:optionalData><tns:name></tns:name><tns:value></tns:value></tns:optionalData><tns:optionalData><tns:name>PRODUCT_TITLE</tns:name><tns:value>Bob
+        Pidgeon</tns:value></tns:optionalData><tns:optionalData><tns:name>AUTHOR</tns:name><tns:value>Iwan
+        Pritchard</tns:value></tns:optionalData><tns:optionalData><tns:name>PRICE</tns:name><tns:value>1.23</tns:value></tns:optionalData><tns:optionalData><tns:name>FIRST_NAME</tns:name><tns:value>Bob</tns:value></tns:optionalData><tns:optionalData><tns:name>SAVING</tns:name><tns:value>0.77</tns:value></tns:optionalData><tns:optionalData><tns:name>PRODUCT_PAGE_URL</tns:name><tns:value>http://www.thebookpeople.co.uk/books/NROJ</tns:value></tns:optionalData><tns:optionalData><tns:name>PRODUCT_IMAGE_URL</tns:name><tns:value>http://images.thebookpeople.co.uk/NROJ.jpg</tns:value></tns:optionalData></tns:recipientData><tns:recipientData><tns:recipient><tns:listName><tns:folderName>z_Stock_Alerts</tns:folderName><tns:objectName>z_Stock_Alerts_Test_List</tns:objectName></tns:listName><tns:recipientId>0</tns:recipientId><tns:customerId></tns:customerId><tns:emailAddress>no-on-list@fake.thebookpeople.com</tns:emailAddress><tns:mobileNumber></tns:mobileNumber><tns:emailFormat>NO_FORMAT</tns:emailFormat></tns:recipient><tns:optionalData><tns:name></tns:name><tns:value></tns:value></tns:optionalData><tns:optionalData><tns:name>PRODUCT_TITLE</tns:name><tns:value>Not
+        Real</tns:value></tns:optionalData><tns:optionalData><tns:name>AUTHOR</tns:name><tns:value>Iwan
+        Pritchard</tns:value></tns:optionalData><tns:optionalData><tns:name>PRICE</tns:name><tns:value>1.23</tns:value></tns:optionalData><tns:optionalData><tns:name>FIRST_NAME</tns:name><tns:value>Not</tns:value></tns:optionalData><tns:optionalData><tns:name>SAVING</tns:name><tns:value>0.77</tns:value></tns:optionalData><tns:optionalData><tns:name>PRODUCT_PAGE_URL</tns:name><tns:value>http://www.thebookpeople.co.uk/books/NROJ</tns:value></tns:optionalData><tns:optionalData><tns:name>PRODUCT_IMAGE_URL</tns:name><tns:value>http://images.thebookpeople.co.uk/NROJ.jpg</tns:value></tns:optionalData></tns:recipientData></tns:triggerCampaignMessage></env:Body></env:Envelope>
+    headers: 
+  response:
+    status:
+      code: 200
+      message: OK
+    headers: 
+    body:
+      encoding: UTF-8
+      string: <?xml version='1.0' encoding='UTF-8'?><soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/"><soapenv:Body><triggerCampaignMessageResponse
+        xmlns="urn:ws.rsys.com"><result><recipientId>452640586</recipientId><success>true</success><errorMessage
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:nil="1" /></result><result><recipientId>-1</recipientId><success>false</success><errorMessage>Recipient
+        Not Found</errorMessage></result></triggerCampaignMessageResponse></soapenv:Body></soapenv:Envelope>
+    http_version: 
+  recorded_at: Thu, 28 May 2015 10:44:02 GMT
+- request:
+    method: post
+    uri: https://ws2.responsys.net/webservices/services/ResponsysWSService
+    body:
+      encoding: UTF-8
+      string: <?xml version="1.0" encoding="UTF-8"?><env:Envelope xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:tns="urn:ws.rsys.com"
+        xmlns:env="http://schemas.xmlsoap.org/soap/envelope/"><env:Header><sessionHeader><sessionId>DEAR_SESSION_ID</sessionId></sessionHeader></env:Header><env:Body><tns:logout></tns:logout></env:Body></env:Envelope>
+    headers: 
+  response:
+    status:
+      code: 200
+      message: OK
+    headers: 
+    body:
+      encoding: UTF-8
+      string: <?xml version='1.0' encoding='UTF-8'?><soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/"><soapenv:Body><logoutResponse
+        xmlns="urn:ws.rsys.com"><result>true</result></logoutResponse></soapenv:Body></soapenv:Envelope>
+    http_version: 
+  recorded_at: Thu, 28 May 2015 10:44:03 GMT
+recorded_with: VCR 2.9.3

@@ -99,6 +99,22 @@ describe ServiceStatus do
     Timecop.return
   end
 
+  describe 'add_check' do
+    it 'had a check that was ok' do
+      @instance.add_check("ElasticSearch", true)
+      expect(@instance.checks).to eql ['ElasticSearch']
+      expect(@instance.errors).to eql []
+      expect(@instance.status).to eql 'Online'
+    end
+
+    it 'had a check that failed' do
+      @instance.add_check("ElasticSearch", false)
+      expect(@instance.checks).to eql ['ElasticSearch']
+      expect(@instance.errors).to eql ['ElasticSearch']
+      expect(@instance.status).to eql 'Error'
+    end
+  end
+
   describe 'add_http_get_check', :vcr do
 
     it 'ok' do

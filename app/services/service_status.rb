@@ -5,7 +5,7 @@ require 'socket'
 require 'sys/filesystem'
 
 class ServiceStatus
-  attr_reader :name, :version, :hostname, :errors, :checks, :timestamp, :status
+  attr_reader :name, :version, :hostname, :errors, :checks, :timestamp
 
   def initialize(name, version, boot_time)
     @boot_time = boot_time
@@ -15,6 +15,11 @@ class ServiceStatus
     @checks = []
     @timestamp = Time.zone.now.strftime('%Y-%m-%d %T')
     @errors = []
+  end
+
+  def add_check(name, ok)
+	@checks << name
+	@errors << name unless ok
   end
 
   def add_http_get_check(name, url)
